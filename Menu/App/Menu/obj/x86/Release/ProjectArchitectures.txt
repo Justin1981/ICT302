@@ -1,0 +1,2 @@
+C:\Users\ise18\Desktop\Unity\Menu\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\ise18\Desktop\Unity\Menu\App\Menu\Menu.csproj;x86
