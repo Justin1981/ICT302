@@ -25,6 +25,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LaserShot
 5252dab092fdac4d4b5eec1e7253d568 Assembly-CSharp.dll:HoloToolkit.Unity.SolverConstantViewSize
 6b65f31824988366512541d7c532ee8b Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.ObjectSurfaceObserver
 6be96e34ec56d8306ef9c5afb1661e60 Assembly-CSharp.dll:HoloToolkit.Sharing.Utilities.ManualIpConfiguration
@@ -43,6 +44,7 @@ b2a36b1a2bf9a27cacd7eb66b78ffc76 Assembly-CSharp.dll:HoloToolkit.Sharing.Sharing
 2396c890cd0961e1517607a563ce1378 Assembly-CSharp.dll:HoloToolkit.Unity.Collections.ObjectCollectionDynamic
 8f169dce821c015a46453dde906ba3f7 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CursorModifier
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.RegisterPointableCanvas
+12bc6e6153f384e4b3e4dd559bdf694a Assembly-CSharp.dll:.Bow
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -118,6 +120,7 @@ dfbbd0f200dcccb2189b8a6462d69d7c Assembly-CSharp.dll:HoloToolkit.Unity.UX.LineUn
 06b78688ddd32fd8e636842d5ee81e27 Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.FileSurfaceObserver
 5dcb61e94186ec41cb847d8459ade72c Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.XboxControllerHandlerBase
 8644983781391a1a0c05940eaa565fef Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.RemoteMeshTarget
+fb1a441f7cb829aad0670393ff99eebb Assembly-CSharp.dll:.Target
 064f0a952de99350d72c261f966c7de6 Assembly-CSharp.dll:HoloToolkit.Sharing.Utilities.AutoJoinSessionAndRoom
 57de9d606b17762955c771ca8e5c67e4 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.ObjectCursor
 d4463422b1b111b746cad022acbdb5b4 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.GazeManager
@@ -139,6 +142,7 @@ df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 4be30993011c7cc5df9c6293fd3d4d1a Assembly-CSharp.dll:HoloToolkit.Unity.UX.DistorterBulge
 979ec343bb4719b48e79cacd32bc5cf1 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.AxisController
 e0a1951523cfeb2d5ee0babfc2505009 Assembly-CSharp.dll:HoloToolkit.Unity.Interpolator
+7e5e4c920e6a15ad8fc4efde1a301531 Assembly-CSharp.dll:.PlayerController
 fe770978f913fce53f59089efcd58dc1 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Ellipse
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -154,6 +158,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Mover
 98084531bd8a843e71c0cc23d5715994 Assembly-CSharp.dll:HoloToolkit.Unity.UAudioManager
 8f58a5afc906d3cd31a7c7e94317cc54 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.MixedRealityTeleport
 ba66ed51a66e14863f51781e69c657ef Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.KeyboardValueKey
@@ -168,6 +173,7 @@ d932d0380045d7c00ec92e1b367f7fc6 Assembly-CSharp.dll:HoloToolkit.Unity.Boundary.
 7e158512b81a0378a6f14a3462ee52c3 Assembly-CSharp.dll:HoloToolkit.Unity.AudioLoFiEffect
 f3895aa0f8579c0a6204ed8fd873188c Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmo
 b0450787278ab3d337666c8729574067 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.CompoundButtonSounds
+3a878f0c6a46f916712d4aa77050b43b Assembly-CSharp.dll:.DestroyByTime
 4a845fcbeae3cdc173e0561837c879b0 Assembly-CSharp.dll:HoloToolkit.Unity.AdaptiveViewport
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -273,6 +279,7 @@ a791e7387cb4113e3b29c2bbd8199b96 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Distor
 af1b899928fa73a7824f1b26518097f6 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.MeshButton
 8186a0148b55fd4b5cdaa99b9937cf7d Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.ButtonMeshProfile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.SpatialMappingSource
+dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.AsteroidMover
 bffc879e328df7088b4672067d06833b Assembly-CSharp.dll:HoloToolkit.Unity.UX.LineParticles
 7af9546644a163574e9d4ff26d86b8f2 Assembly-CSharp.dll:HoloToolkit.Unity.FadeManager
 c33d01c4bc5af79105f862d8a2f08cdf Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.ButtonIconProfileTexture
@@ -316,7 +323,9 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.DebugPanelFPSCounter
 8006069626ab55ad9dab7a1d12465dc5 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.GamePadInputSource
+4c4e5bbdfb8b8f4d80c5ad7176b30d43 Assembly-CSharp.dll:.RandomRotater
 d7abe84a44f6aed10aea7132d8e34f79 Assembly-CSharp.dll:HoloToolkit.Unity.Boundary.SceneContentAdjuster
+cd0802dc4cf88500375fdb0f4d052332 Assembly-CSharp.dll:.DestroyByContact
 027647ed3c077d2129efe22b6bd62a79 Assembly-CSharp.dll:HoloToolkit.Unity.AudioEmitter
 1193c002177eba10253315561d91d3d2 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Parabola
 524356edcc2977b98283bcbebbcc6c06 Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBox
@@ -334,6 +343,7 @@ dcd03b8c3fdf7f3a189ae064a436ad12 Assembly-CSharp.dll:HoloToolkit.Unity.GpuTiming
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Arrow
 8e2d7a26f8aa5dc9b49742e37f8adc9a Assembly-CSharp.dll:HoloToolkit.Unity.AdaptiveQuality
 79b43dd87d6a06e44806ac1c41e7835e Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.SpatialMappingManager
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
@@ -369,8 +379,10 @@ de58daf7a7585c93b4a043e238d5431c Assembly-CSharp.dll:HoloToolkit.Unity.UX.Spline
 7000360c28a9dd6e5169290e63863ba5 Assembly-CSharp.dll:HoloToolkit.Unity.Receivers.ToggleActiveReceiver
 4f5002455349620adc2ea3784145650d Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.FocusManager
 caf36d571bbde50738bdafae2e623420 Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.SymbolDisableHighlight
+3c5d6a064bb165d4dd65b669a1f79cc6 Assembly-CSharp.dll:.DestroyByBoundary
 da88126cdf11ba2e81311bc5c64d91f3 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputControl
 774d2cbfee83c1c0f3c11e30c7a8c851 Assembly-CSharp.dll:HoloToolkit.Unity.ToggleDebugWindow
+1688efb0f219f00c2147797e1b494fc6 Assembly-CSharp.dll:.GameController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Sharing.TransformSynchronizer
 14b6addcca4e931e521ac082ad7316db Assembly-CSharp.dll:HoloToolkit.Unity.AudioOccluder
 f1dddc522eb4451a473352e2116e6cff Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.GamePadHandlerBase
@@ -462,15 +474,3 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
-3c5d6a064bb165d4dd65b669a1f79cc6 Assembly-CSharp.dll:.DestroyByBoundary
-fb1a441f7cb829aad0670393ff99eebb Assembly-CSharp.dll:.Target
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LaserShot
-4c4e5bbdfb8b8f4d80c5ad7176b30d43 Assembly-CSharp.dll:.RandomRotater
-cd0802dc4cf88500375fdb0f4d052332 Assembly-CSharp.dll:.DestroyByContact
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Arrow
-3a878f0c6a46f916712d4aa77050b43b Assembly-CSharp.dll:.DestroyByTime
-12bc6e6153f384e4b3e4dd559bdf694a Assembly-CSharp.dll:.Bow
-1688efb0f219f00c2147797e1b494fc6 Assembly-CSharp.dll:.GameController
-7e5e4c920e6a15ad8fc4efde1a301531 Assembly-CSharp.dll:.PlayerController
-dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.AsteroidMover
-dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Mover
