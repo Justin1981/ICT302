@@ -1,0 +1,2 @@
+C:\Users\Justin\Uni\GitHub\ICT302\Beat The Scar v2\App\Beat the Scar v2\Beat the Scar v2.csproj;x86
+C:\Users\Justin\Uni\GitHub\ICT302\Beat The Scar v2\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86

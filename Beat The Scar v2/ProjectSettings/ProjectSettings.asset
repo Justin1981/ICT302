@@ -4,15 +4,15 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 8cf152c14f9ad9a44a85604ce7f6f1fd
+  productGUID: b63d085494b409a4da61f72cf5c106a7
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Beat The Scar v2
+  companyName: Team Deliverables
+  productName: Beat the Scar v2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -562,14 +562,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Beat The Scar v2
+  metroPackageName: DevBuild
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Beat The Scar v2
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 80e00eb502fdd401
+  metroApplicationDescription: DevBuild
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -588,7 +588,7 @@ PlayerSettings:
       HumanInterfaceDevice: False
       InternetClient: False
       InternetClientServer: False
-      Microphone: False
+      Microphone: True
       PrivateNetworkClientServer: False
       SpatialPerception: True
       WebCam: False
