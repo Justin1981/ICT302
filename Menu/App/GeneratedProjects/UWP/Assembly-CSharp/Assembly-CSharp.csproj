@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5ad5ad25-d1e2-4994-a3b6-d47c379e71e9}</ProjectGuid>
+    <ProjectGuid>{7883ff4c-d097-4825-b785-3d550f189729}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyCSharpWSA</RootNamespace>
@@ -1789,6 +1789,9 @@
     <Compile Include="$(UnityProjectDir)Assets\Scripts\IMenuItemData.cs">
       <Link>Scripts\IMenuItemData.cs</Link>
     </Compile>
+    <Compile Include="$(UnityProjectDir)Assets\Scripts\LoadScene.cs">
+      <Link>Scripts\LoadScene.cs</Link>
+    </Compile>
     <Compile Include="$(UnityProjectDir)Assets\Scripts\MenuBuilder.cs">
       <Link>Scripts\MenuBuilder.cs</Link>
     </Compile>
@@ -1800,6 +1803,9 @@
     </Compile>
     <Compile Include="$(UnityProjectDir)Assets\Scripts\MenuItemData.cs">
       <Link>Scripts\MenuItemData.cs</Link>
+    </Compile>
+    <Compile Include="$(UnityProjectDir)Assets\Scripts\MenuListener.cs">
+      <Link>Scripts\MenuListener.cs</Link>
     </Compile>
     <Compile Include="$(UnityProjectDir)Assets\Scripts\MenuSelectedMessage.cs">
       <Link>Scripts\MenuSelectedMessage.cs</Link>

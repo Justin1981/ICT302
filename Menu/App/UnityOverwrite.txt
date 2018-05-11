@@ -5,11 +5,11 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-Menu.sln: AD73E1287B4616C16452B91DF9606B8F
+Menu.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 1D02BC64BAC0D041019673A1C4C51737
 Menu\App.cs: E7915E57A8E010B16C8203065D1821ED
-Menu\Menu.csproj: 05E67E481DEBF2F9B6BCD20511FE34C8
-Menu\Menu.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
+Menu\Menu.csproj: C28E6123E7E1016DF862D8EA667C7D9F
+Menu\Menu.csproj.user: modified
 Menu\Package.appxmanifest: 95E7CAF70B09CC6A4ED95DC2F3F182CE
 Menu\project.json: 1D02BC64BAC0D041019673A1C4C51737
 Menu\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
@@ -18,4 +18,5 @@ Menu\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
 Menu\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
 Menu\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
 Menu\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
+Menu\obj\x86\Release\Menu.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
 Menu\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
