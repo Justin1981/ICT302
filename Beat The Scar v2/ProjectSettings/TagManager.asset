@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tip
   - Boundary
+  - Enemy
   layers:
   - Default
   - TransparentFX

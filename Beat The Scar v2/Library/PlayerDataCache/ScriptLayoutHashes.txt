@@ -1,6 +1,6 @@
 Metro
 PlayerPath?
-C:/Users/Justin/Uni/GitHub/ICT302/Beat The Scar v2/App
+C:/Users/Justin/Uni/ICT302/Project/App
 SceneListBegin?
 Assets/_Scenes/Planet1.unity
 SceneListEnd?
@@ -365,6 +365,7 @@ ecce978abee70e7852a63184a5b0520d Assembly-CSharp.dll:HoloToolkit.Unity.DebugPane
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.ApplicationViewManager
 5487efccb06583184c3fca5a644d0e7c Assembly-CSharp.dll:HoloToolkit.Unity.SolverHandler
 e8ba2e453aff9cf5487189ad115348c5 Assembly-CSharp.dll:HoloToolkit.Unity.UX.DistorterSphere
+35276c58f93f575992de70ec997d4351 Assembly-CSharp.dll:.WeaponController
 4359ad7c5b190e7c5fd06955c3d79519 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.SpeechInputHandler
 8644983781391a1a0c05940eaa565fef Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.RemoteMeshSource
 bf32e4c941fcd4078b3b322bed30732a Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmoShell
@@ -382,7 +383,7 @@ caf36d571bbde50738bdafae2e623420 Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.Sym
 3c5d6a064bb165d4dd65b669a1f79cc6 Assembly-CSharp.dll:.DestroyByBoundary
 da88126cdf11ba2e81311bc5c64d91f3 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputControl
 774d2cbfee83c1c0f3c11e30c7a8c851 Assembly-CSharp.dll:HoloToolkit.Unity.ToggleDebugWindow
-1688efb0f219f00c2147797e1b494fc6 Assembly-CSharp.dll:.GameController
+850e4d340427c402b5fa86773c588410 Assembly-CSharp.dll:.GameController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Sharing.TransformSynchronizer
 14b6addcca4e931e521ac082ad7316db Assembly-CSharp.dll:HoloToolkit.Unity.AudioOccluder
 f1dddc522eb4451a473352e2116e6cff Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.GamePadHandlerBase
