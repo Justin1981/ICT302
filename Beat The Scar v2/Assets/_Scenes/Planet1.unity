@@ -551,7 +551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622709990}
   m_Layer: 0
-  m_Name: ShotSpawn
+  m_Name: ShotSpawnEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,7 +1028,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1129792270}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1be4472894949437694aead55c6da60f, type: 3}
@@ -1160,6 +1160,34 @@ Transform:
   - {fileID: 433817404}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1363381140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1363381141}
+  m_Layer: 0
+  m_Name: ShotSpawnPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1363381141
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1363381140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1481118097}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481118094 stripped
 GameObject:
@@ -1364,9 +1392,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posText: {fileID: 1871762541}
-  ShotSpawn: {fileID: 1481118097}
+  ShotSpawn: {fileID: 1363381141}
   FireForce: 1
-  ShotPrefab: {fileID: 1642073634676416, guid: 2df3e395423afbe4ab182bbf628cbcf3, type: 2}
+  ShotPrefab: {fileID: 1414224184824898, guid: a9458f441896a1e46a291f0a7839ae18, type: 2}
 --- !u!4 &1688928382
 Transform:
   m_ObjectHideFlags: 0

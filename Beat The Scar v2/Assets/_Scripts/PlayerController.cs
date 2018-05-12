@@ -63,9 +63,9 @@ public class PlayerController : MonoBehaviour
         // Apply a force with desired magnitude in this direction to the shot
         //shotBody.AddForce(ShotSpawn.forward * FireForce);
 
-        shot.GetComponent<Rigidbody>().AddForce(ShotSpawn.forward * FireForce);
+        //shot.GetComponent<Rigidbody>().AddForce(ShotSpawn.forward * FireForce);
 
-        shotPos = shot.GetComponent<Rigidbody>().transform;
+        //shotPos = shot.GetComponent<Rigidbody>().transform;
 
         shot.GetComponent<AudioSource>().Play();
     }
