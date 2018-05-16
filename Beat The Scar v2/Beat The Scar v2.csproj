@@ -13,14 +13,12 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>WSAPlayer:21</UnityBuildTarget>
     <UnityVersion>2017.4.0f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -246,10 +244,10 @@
     <Compile Include="Assets\_Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\_Scripts\DestroyByContact.cs" />
     <Compile Include="Assets\_Scripts\DestroyByTime.cs" />
-    <Compile Include="Assets\_Scripts\MoverEnemy.cs" />
     <Compile Include="Assets\_Scripts\GameController.cs" />
     <Compile Include="Assets\_Scripts\LaserShot.cs" />
     <Compile Include="Assets\_Scripts\Mover.cs" />
+    <Compile Include="Assets\_Scripts\MoverEnemy.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\RandomRotater.cs" />
     <Compile Include="Assets\_Scripts\Target.cs" />
@@ -783,6 +781,9 @@
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandard.shader" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandardInput.cginc" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFVertexLitCommon.cginc" />
+    <None Include="Assets\Models\SolarSystem\Shaders\default_shader_source\DefaultResourcesExtra\Normal-VertexLit.shader" />
+    <None Include="Assets\Models\SolarSystem\Shaders\default_shader_source\DefaultResourcesExtra\Standard.shader" />
+    <None Include="Assets\Shaders\OccusionRim.shader" />
     <None Include="Assets\mcs.rsp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

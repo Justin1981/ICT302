@@ -430,6 +430,9 @@
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandard.shader" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandardInput.cginc" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFVertexLitCommon.cginc" />
+    <None Include="Assets\Models\SolarSystem\Shaders\default_shader_source\DefaultResourcesExtra\Normal-VertexLit.shader" />
+    <None Include="Assets\Models\SolarSystem\Shaders\default_shader_source\DefaultResourcesExtra\Standard.shader" />
+    <None Include="Assets\Shaders\OccusionRim.shader" />
     <None Include="Assets\mcs.rsp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
