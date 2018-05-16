@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beat The Scar v2", "Beat The Scar v2.csproj", "{E78381C6-18ED-4569-3A23-9F4B8FEE6100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beat The Scar v2.Editor", "Beat The Scar v2.Editor.csproj", "{F8E514A9-60A6-D24E-27E4-F9CB5561E0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PackageManagerUI.Editor", "Unity.PackageManagerUI.Editor.csproj", "{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.StandardEvents", "UnityEditor.StandardEvents.csproj", "{6800202F-4402-D405-F8CB-03DC7BD78B92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E78381C6-18ED-4569-3A23-9F4B8FEE6100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78381C6-18ED-4569-3A23-9F4B8FEE6100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78381C6-18ED-4569-3A23-9F4B8FEE6100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78381C6-18ED-4569-3A23-9F4B8FEE6100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E514A9-60A6-D24E-27E4-F9CB5561E0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E514A9-60A6-D24E-27E4-F9CB5561E0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8E514A9-60A6-D24E-27E4-F9CB5561E0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E514A9-60A6-D24E-27E4-F9CB5561E0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6800202F-4402-D405-F8CB-03DC7BD78B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6800202F-4402-D405-F8CB-03DC7BD78B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6800202F-4402-D405-F8CB-03DC7BD78B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6800202F-4402-D405-F8CB-03DC7BD78B92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
