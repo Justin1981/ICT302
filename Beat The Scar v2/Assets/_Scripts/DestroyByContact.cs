@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class DestroyByContact : MonoBehaviour
 {
     public GameObject Explosion;
@@ -9,6 +11,9 @@ public class DestroyByContact : MonoBehaviour
     public int ScoreValue = 1;
 
     private GameController gameController;
+
+
+    public Text PlayerCollision;
 
     void Start()
     {
