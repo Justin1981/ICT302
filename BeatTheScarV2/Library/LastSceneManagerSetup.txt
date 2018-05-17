@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Planet1.unity
+=======
+- path: Assets/scenes/Statistics.unity
+>>>>>>> origin/master
   isLoaded: 1
   isActive: 1
