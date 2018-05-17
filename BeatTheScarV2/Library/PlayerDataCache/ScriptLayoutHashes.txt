@@ -1,12 +1,8 @@
 Metro
 PlayerPath?
-C:/Users/ise18/Desktop/Unity/BeatTheScarV3/BeatTheScarV2/App
+C:/Users/Justin/Uni/ICT302/Project/App
 SceneListBegin?
-Assets/scenes/Menu.unity
-Assets/scenes/main.unity
 Assets/_Scenes/Planet1.unity
-Assets/scenes/Options.unity
-Assets/scenes/Statistics.unity
 SceneListEnd?
 7abde016883951c4ca4e7c44ce6adb2c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLauncher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmoHandle
@@ -245,7 +241,6 @@ cade32f28e21a5f2370dd82c3d56c28c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLaun
 63682487c182b598336fe9d2988dac69 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Duplicator
 b48597bac756ea53cecb08fc53de8b9f Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.ButtonTextProfile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.SetGlobalListener
-32e8fe00b63ed946490b898f6024a2f2 Facebook.Unity.Settings.dll:Facebook.Unity.Settings.FacebookSettings
 39e33eeaa8482d2bae989c16b9871dff Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.MeshCursor
 5bbcdf115068cbc700263860c5b9348b Assembly-CSharp.dll:HoloToolkit.Unity.SolverMomentumizer
 653e09ebb70bfbeeaf717decd116b136 Assembly-CSharp.dll:HoloToolkit.Unity.ClipPlane
