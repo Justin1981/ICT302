@@ -561,6 +561,7 @@
     <Compile Include="Assets\Scripts\ResumeGame.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFConstant.cginc" />
+    <None Include="Assets\Shaders\OccusionRim.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\UnlitConfigurable.shader" />
     <None Include="Assets\HoloToolkit\UX\Shaders\HUXButtonShader.shader" />
     <None Include="Assets\HoloToolkit\SpatialUnderstanding\Materials\SpatialUnderstandingSurface.shader" />
@@ -592,10 +593,12 @@
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\LambertianConfigurableTransparent.shader" />
     <None Include="Assets\HoloToolkit\UX\Shaders\InvisibleShader.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\FastConfigurable.shader" />
+    <None Include="Assets\Models\SolarSystem\Shaders\default_shader_source\DefaultResourcesExtra\Normal-VertexLit.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\macro.cginc" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\HoloToolkitCommon.cginc" />
     <None Include="Assets\HoloToolkit\UX\Shaders\DebugNormals.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\macro.cginc" />
+    <None Include="Assets\Models\SolarSystem\Shaders\default_shader_source\DefaultResourcesExtra\Standard.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\HoloToolkitCommon.cginc" />
     <None Include="Assets\HoloToolkit\UX\Shaders\Alpha-Diffuse.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Standard.shader" />
