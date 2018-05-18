@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/Statistics.unity
     guid: 88ad799c5e4a91547bbd4e1d40b3ff10
+  - enabled: 1
+    path: Assets/_Scenes/Planet2.unity
+    guid: ce79d5eb585583047890226b48ed0e42
   m_configObjects: {}
