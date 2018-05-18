@@ -13,10 +13,11 @@ public class PlayerController : MonoBehaviour
 
     //******
 
-    public Transform ShotSpawn;
+    public Transform PlayerPosition;
+    public GameObject PlayerExplosion;
 
     // The magintude of the force the shot will be fired by
-    public float FireForce = 1.0f;
+    ///public float FireForce = 1.0f;
     public GameObject ShotPrefab;
 
     private GestureRecognizer gestureRecognizer;
@@ -34,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //GetComponent<Transform>().SetPositionAndRotation(PlayerPosition.position, PlayerPosition.rotation);
+
         if (shotPos != null)
         {
             posText.text = "Pos: " + shotPos.position.ToString();
@@ -51,19 +54,19 @@ public class PlayerController : MonoBehaviour
         //GetComponent<AudioSource>().Play();
 
         //Transform baseTransform = ShotPrefab.GetComponent<Transform>();
-        //Quaternion baseRotate = baseTransform.rotation * Quaternion.LookRotation(ShotSpawn.forward);
+        //Quaternion baseRotate = baseTransform.rotation * Quaternion.LookRotation(PlayerPosition.forward);
 
         // instantiate shot at current position and rotation of camera
-        GameObject shot = Instantiate(ShotPrefab, ShotSpawn.position, ShotSpawn.rotation) as GameObject;
+        GameObject shot = Instantiate(ShotPrefab, PlayerPosition.position, PlayerPosition.rotation) as GameObject;
 
         // Calculate the direction for firing the shot 5 degrees upward
-        //Vector3 fireDirection = Quaternion.AngleAxis(-5, ShotSpawn.right) * ShotSpawn.forward;
+        //Vector3 fireDirection = Quaternion.AngleAxis(-5, PlayerPosition.right) * PlayerPosition.forward;
         //Rigidbody shotBody = shot.GetComponent<Rigidbody>();
 
         // Apply a force with desired magnitude in this direction to the shot
-        //shotBody.AddForce(ShotSpawn.forward * FireForce);
+        //shotBody.AddForce(PlayerPosition.forward * FireForce);
 
-        //shot.GetComponent<Rigidbody>().AddForce(ShotSpawn.forward * FireForce);
+        //shot.GetComponent<Rigidbody>().AddForce(PlayerPosition.forward * FireForce);
 
         //shotPos = shot.GetComponent<Rigidbody>().transform;
 

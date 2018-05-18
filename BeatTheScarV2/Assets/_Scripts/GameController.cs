@@ -17,21 +17,39 @@ public class GameController : MonoBehaviour
     public Text ScoreText;
     public Text RestartText;
     public Text GameOverText;
+    public Text PlayerHealthText;
 
     private int score;
     private bool gameOver;
     private bool restart;
+    private int playerHealth;
+
+    private PlayerController player;
 
     void Start()
     {
+        GameObject gcObj = GameObject.FindGameObjectWithTag("Player");
+        if (gcObj != null)
+        {
+            player = gcObj.GetComponent<PlayerController>();
+        }
+        if (player == null)
+        {
+            Debug.Log("'PlayerController' script not found");
+        }
+
+
         gameOver = false;
         restart = false;
         RestartText.text = "";
         GameOverText.text = "";
         score = 0;
-        UpdateScore();
+        PrintScore();
         StartCoroutine(SpawnWaves());
-       
+
+        playerHealth = 100;
+        PrintPlayerHealth();
+
     }
 
     void Update()
@@ -49,6 +67,8 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
+        Instantiate(player.PlayerExplosion, player.transform.position, player.transform.rotation);
+
         GameOverText.text = "Game Over";
         gameOver = true;
     }
@@ -83,12 +103,28 @@ public class GameController : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
-        UpdateScore();
+        PrintScore();
     }
 
-    private void UpdateScore()
+    private void PrintScore()
     {
         ScoreText.text = "Score: " + score.ToString();
     }
 
+    public void PlayerHit()
+    {
+        playerHealth -= 10;
+
+        if(playerHealth <= 0)
+        {
+            GameOver();
+        }
+
+        PrintPlayerHealth();
+    }
+
+    private void PrintPlayerHealth()
+    {
+        PlayerHealthText.text = "Health: " + playerHealth.ToString();
+    }
 }
