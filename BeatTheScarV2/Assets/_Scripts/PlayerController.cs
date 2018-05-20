@@ -16,37 +16,53 @@ public class PlayerController : MonoBehaviour
     public Transform PlayerPosition;
     public GameObject PlayerExplosion;
 
+    public int StartingHealth = 100;
+    
+    public Slider HealthSlider;
+    public Text PlayerHealthText;
+
+
     // The magintude of the force the shot will be fired by
     ///public float FireForce = 1.0f;
     public GameObject ShotPrefab;
 
-    private GestureRecognizer gestureRecognizer;
+    //private GestureRecognizer gestureRecognizer;
+
+    public int CurrentHealth;
+    private bool damaged;
+    private bool alive;
 
     // Use this for initialization
     void Start()
     {
-        // Set up GestureRecognizer to register the users finger taps
-        gestureRecognizer = new GestureRecognizer();
-        gestureRecognizer.TappedEvent += GestureRecognizerOnTappedEvent;
-        gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
-        gestureRecognizer.StartCapturingGestures();
+        //// Set up GestureRecognizer to register the users finger taps
+        //gestureRecognizer = new GestureRecognizer();
+        //gestureRecognizer.TappedEvent += GestureRecognizerOnTappedEvent;
+        //gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
+        //gestureRecognizer.StartCapturingGestures();
 
+        CurrentHealth = StartingHealth;
+        UpdateHealthBar();
+        damaged = false;
+        alive = true;
     }
 
     void Update()
     {
         //GetComponent<Transform>().SetPositionAndRotation(PlayerPosition.position, PlayerPosition.rotation);
 
-        if (shotPos != null)
-        {
-            posText.text = "Pos: " + shotPos.position.ToString();
-        }
+        //if (shotPos != null)
+        //{
+        //    posText.text = "Pos: " + shotPos.position.ToString();
+        //}
+
+        posText.text = "Pos: " + PlayerPosition.position.ToString();
     }
 
-    private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
-    {
-        Shoot();
-    }
+    //private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+    //{
+    //    Shoot();
+    //}
 
     // This method will be publicly accessible to allow for voice-activated firing
     public void Shoot()
@@ -71,5 +87,44 @@ public class PlayerController : MonoBehaviour
         //shotPos = shot.GetComponent<Rigidbody>().transform;
 
         shot.GetComponent<AudioSource>().Play();
+    }
+
+    public void TakeDamage(int amount)
+    {
+        damaged = true;
+
+        CurrentHealth -= amount;
+
+        UpdateHealthBar();
+
+        // If the player has lost all it's health and the death flag hasn't been set yet...
+        if (CurrentHealth <= 0 && alive)
+        {
+            // ... it should die.
+            Death();
+
+        }
+
+    }
+
+    private void Death()
+    {
+        // Set the death flag so this function won't be called again.
+        alive = false;
+
+        Vector3 pos = PlayerPosition.position + PlayerPosition.forward * 3.0f;  // testing
+
+        Instantiate(PlayerExplosion, pos, PlayerPosition.rotation);
+    }
+
+    public bool Alive()
+    {
+        return alive;
+    }
+
+    private void UpdateHealthBar()
+    {
+        HealthSlider.value = CurrentHealth;
+        PlayerHealthText.text = "Health: " + CurrentHealth.ToString();
     }
 }

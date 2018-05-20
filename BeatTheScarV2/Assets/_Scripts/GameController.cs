@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using UnityEngine.XR.WSA.Input;
+
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -17,17 +19,28 @@ public class GameController : MonoBehaviour
     public Text ScoreText;
     public Text RestartText;
     public Text GameOverText;
-    public Text PlayerHealthText;
+    //public Text PlayerHealthText;
 
     private int score;
     private bool gameOver;
     private bool restart;
-    private int playerHealth;
+    private bool pause;
+    //private int playerHealth;
 
     private PlayerController player;
 
+    private GestureRecognizer gestureRecognizer;
+
+    
+
     void Start()
     {
+        // Set up GestureRecognizer to register the users finger taps
+        gestureRecognizer = new GestureRecognizer();
+        gestureRecognizer.TappedEvent += GestureRecognizerOnTappedEvent;
+        gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
+        gestureRecognizer.StartCapturingGestures();
+
         GameObject gcObj = GameObject.FindGameObjectWithTag("Player");
         if (gcObj != null)
         {
@@ -41,33 +54,48 @@ public class GameController : MonoBehaviour
 
         gameOver = false;
         restart = false;
+        pause = false;
         RestartText.text = "";
         GameOverText.text = "";
         score = 0;
         PrintScore();
         StartCoroutine(SpawnWaves());
 
-        playerHealth = 100;
-        PrintPlayerHealth();
+        //playerHealth = 100;
+        //PrintPlayerHealth();
 
     }
 
     void Update()
     {
-        if(restart)
+        //if(restart)
+        //{
+        //    if(Input.GetKeyDown(KeyCode.R))
+        //    {
+        //        //Application.LoadLevel(Application.loadedLevel);
+        //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //    }
+        //}
+
+        //if (!player.Alive() && !gameOver)
+        //{
+        //    GameOver();
+        //}
+
+    }
+
+
+    private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+    {
+        if (!gameOver)
         {
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                //Application.LoadLevel(Application.loadedLevel);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            player.Shoot();
         }
-       
     }
 
     public void GameOver()
     {
-        Instantiate(player.PlayerExplosion, player.transform.position, player.transform.rotation);
+        //Instantiate(player.PlayerExplosion, player.transform.position, player.transform.rotation);
 
         GameOverText.text = "Game Over";
         gameOver = true;
@@ -93,7 +121,7 @@ public class GameController : MonoBehaviour
 
             if(gameOver)
             {
-                RestartText.text = "Press 'R' for Restart";
+                RestartText.text = "Say 'Restart' to Restart Game";
                 restart = true;
                 break;
             }
@@ -113,18 +141,34 @@ public class GameController : MonoBehaviour
 
     public void PlayerHit()
     {
-        playerHealth -= 10;
 
-        if(playerHealth <= 0)
+        if(player.Alive())
+        {
+            player.TakeDamage(10);
+
+        }
+
+        if (!player.Alive() && !gameOver)
         {
             GameOver();
         }
 
-        PrintPlayerHealth();
     }
 
-    private void PrintPlayerHealth()
+
+    public void Restart()
     {
-        PlayerHealthText.text = "Health: " + playerHealth.ToString();
+        if(restart)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    public void Pause()
+    {
+        if (Time.timeScale == 1)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
     }
 }
