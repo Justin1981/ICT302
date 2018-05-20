@@ -70,7 +70,9 @@
     <Compile Include="Assets\_Scripts\Mover.cs" />
     <Compile Include="Assets\_Scripts\MoverEnemy.cs" />
     <Compile Include="Assets\_Scripts\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\_Scripts\RandomRotater.cs" />
+    <Compile Include="Assets\_Scripts\SpeechManager.cs" />
     <Compile Include="Assets\_Scripts\Target.cs" />
     <Compile Include="Assets\_Scripts\WeaponController.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\BoundaryManager.cs" />
