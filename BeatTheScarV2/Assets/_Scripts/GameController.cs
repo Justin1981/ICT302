@@ -70,7 +70,22 @@ public class GameController : MonoBehaviour
         //playerHealth = 100;
         //PrintPlayerHealth();
 
+
+        //InteractionManager.SourcePressed += GetPosition;
+
+
+        //InteractionManager.InteractionSourcePressed += GetPosition;
+
     }
+
+    //private void GetPosition(InteractionSourceState state)
+    //{
+    //    Vector3 pos;
+    //    if(state.sourcePose.TryGetPosition(out pos))
+    //    { 
+
+    //    }
+    //}
 
     void Update()
     {
@@ -172,8 +187,21 @@ public class GameController : MonoBehaviour
             player.TakeDamage(10);
             //playerHitPlaneOn = true;
             //playerHitPlane.SetActive(true);
-            StartCoroutine(FlashPlayerHitPlane());
+            //StartCoroutine(FlashPlayerHitPlane());
 
+            //if(playerHitPlaneOn)
+            //{
+            //    ScoreText.text = "playerHitPlaneOFF";
+            //    playerHitPlane.SetActive(false);
+            //    playerHitPlaneOn = false;
+            //}
+            //if(!playerHitPlaneOn)
+            //{
+            //    ScoreText.text = "playerHitPlaneON";
+            //    playerHitPlane.SetActive(true);
+            //    playerHitPlaneOn = true;
+
+            //}
         }
 
         if (!player.Alive() && !gameOver)
@@ -183,12 +211,13 @@ public class GameController : MonoBehaviour
 
     }
 
-    private IEnumerator FlashPlayerHitPlane()
-    {
-        playerHitPlane.SetActive(true);
-        yield return new WaitForSeconds(5);
-        playerHitPlane.SetActive(false);
-    }
+    //private IEnumerator FlashPlayerHitPlane()
+    //{
+    //    ScoreText.text = "FlashPlayerHitPlane";
+    //    playerHitPlane.SetActive(true);
+    //    yield return new WaitForSeconds(5);
+    //    playerHitPlane.SetActive(false);
+    //}
 
 
     public void Restart()

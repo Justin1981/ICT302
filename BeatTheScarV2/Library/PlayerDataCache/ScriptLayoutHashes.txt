@@ -3,10 +3,11 @@ PlayerPath?
 C:/Users/Justin/Uni/ICT302/Project/App
 SceneListBegin?
 Assets/scenes/Menu.unity
-Assets/scenes/main.unity
+Assets/scenes/TravelScene.unity
 Assets/_Scenes/Planet1.unity
 Assets/scenes/Options.unity
 Assets/scenes/Statistics.unity
+Assets/scenes/main.unity
 SceneListEnd?
 7abde016883951c4ca4e7c44ce6adb2c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLauncher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmoHandle
