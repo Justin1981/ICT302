@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 //using System.Runtime.Serialization.Formatters.Binary;
 /////////////////////////////////////////////////////////////////////////
@@ -9,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class HeadColl : MonoBehaviour {
     public int health;
-    public TextMesh hp;
+    public Text hp;
     // Use this for initialization
     void Start () {
 
@@ -38,24 +39,7 @@ public class HeadColl : MonoBehaviour {
         hp.text = "Times hit:" + health;
         //hp.transform.position.x = 0;
 
-
-        //SaveFile();
     }
-
-    //public void SaveFile()
-    //{
-    //    string destination = Application.persistentDataPath + "/asteroidSave.dat";
-    //    FileStream file;
-
-    //    if (File.Exists(destination)) file = File.OpenWrite(destination);
-    //    else file = File.Create(destination);
-
-    //    int data = health;
-    //    /////////////////////////////////////////////////////////////////////////
-    //    //BinaryFormatter bf = new BinaryFormatter();
-    //    //bf.Serialize(file, data);
-    //    //file.Close();
-    //}
 
 
     //not used can delete, keeping around just in case
