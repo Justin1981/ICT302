@@ -5,14 +5,17 @@ using UnityEngine;
 public class PlayMenuSound : MonoBehaviour {
 
     public AudioSource source;
+    public AudioClip sound;
+    public AudioClip hover;
 
-	void Start()
+	public void ClickSound()
     {
-        source = GetComponent<AudioSource>();
+        source.PlayOneShot(sound);
+    }
+
+    public void HoverSound()
+    {
+        source.PlayOneShot(hover);
     }
 	
-	public void OnHover()
-    {
-        source.Play();
-    }
 }

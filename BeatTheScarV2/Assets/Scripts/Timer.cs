@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        timeLeft = 10;
+        //timeLeft = 10;
         hidePaused();
 	}
 	
