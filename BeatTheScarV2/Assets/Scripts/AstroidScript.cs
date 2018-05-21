@@ -11,7 +11,7 @@ public class AstroidScript : MonoBehaviour {
     Vector3 target;
 	// Use this for initialization
 	void Start () {
-        target = new Vector3(transform.position.x, transform.position.y, -6);
+        target = new Vector3(transform.position.x, transform.position.y, -10);
 	}
 
 
