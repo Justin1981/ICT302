@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
+//using System.Runtime.Serialization.Formatters.Binary;
+/////////////////////////////////////////////////////////////////////////
+
 using UnityEngine.SceneManagement;
 
 public class HeadColl : MonoBehaviour {
@@ -37,23 +39,23 @@ public class HeadColl : MonoBehaviour {
         //hp.transform.position.x = 0;
 
 
-        SaveFile();
+        //SaveFile();
     }
 
-    public void SaveFile()
-    {
-        string destination = Application.persistentDataPath + "/asteroidSave.dat";
-        FileStream file;
+    //public void SaveFile()
+    //{
+    //    string destination = Application.persistentDataPath + "/asteroidSave.dat";
+    //    FileStream file;
 
-        if (File.Exists(destination)) file = File.OpenWrite(destination);
-        else file = File.Create(destination);
+    //    if (File.Exists(destination)) file = File.OpenWrite(destination);
+    //    else file = File.Create(destination);
 
-        int data = health;
-
-        BinaryFormatter bf = new BinaryFormatter();
-        bf.Serialize(file, data);
-        file.Close();
-    }
+    //    int data = health;
+    //    /////////////////////////////////////////////////////////////////////////
+    //    //BinaryFormatter bf = new BinaryFormatter();
+    //    //bf.Serialize(file, data);
+    //    //file.Close();
+    //}
 
 
     //not used can delete, keeping around just in case
