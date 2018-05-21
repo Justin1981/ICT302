@@ -31,7 +31,9 @@ public class GameController : MonoBehaviour
 
     private GestureRecognizer gestureRecognizer;
 
-    
+    private GameObject playerHitPlane;
+    private bool playerHitPlaneOn;
+    private int playerHitPlaneCount;
 
     void Start()
     {
@@ -50,6 +52,10 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("'PlayerController' script not found");
         }
+
+        playerHitPlane = GameObject.FindGameObjectWithTag("PlayerHitPlane");
+        playerHitPlaneOn = false;
+        playerHitPlaneCount = 0;
 
 
         gameOver = false;
@@ -81,6 +87,25 @@ public class GameController : MonoBehaviour
         //{
         //    GameOver();
         //}
+
+        //if(playerHitPlaneOn && !playerHitPlane.activeSelf)
+        //{
+        //    playerHitPlane.SetActive(true);
+        //}
+
+        //if(playerHitPlane.activeSelf)
+        //{
+        //    playerHitPlaneCount++;
+        //}
+
+        //if(playerHitPlaneCount > 500)
+        //{
+        //    playerHitPlaneOn = false;
+        //    playerHitPlane.SetActive(false);
+        //    playerHitPlaneCount = 0;
+        //}
+
+        
 
     }
 
@@ -145,6 +170,9 @@ public class GameController : MonoBehaviour
         if(player.Alive())
         {
             player.TakeDamage(10);
+            //playerHitPlaneOn = true;
+            //playerHitPlane.SetActive(true);
+            StartCoroutine(FlashPlayerHitPlane());
 
         }
 
@@ -153,6 +181,13 @@ public class GameController : MonoBehaviour
             GameOver();
         }
 
+    }
+
+    private IEnumerator FlashPlayerHitPlane()
+    {
+        playerHitPlane.SetActive(true);
+        yield return new WaitForSeconds(5);
+        playerHitPlane.SetActive(false);
     }
 
 
