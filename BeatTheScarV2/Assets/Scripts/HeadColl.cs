@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.SceneManagement;
 
 public class HeadColl : MonoBehaviour {
     public int health;
@@ -10,7 +13,7 @@ public class HeadColl : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
+    // Update is called once per frame
 	void Update () {
         //position of holo lens
         var headPosition = Camera.main.transform.position;
@@ -32,6 +35,24 @@ public class HeadColl : MonoBehaviour {
         //update the health, change to times hit maybe?
         hp.text = "Times hit:" + health;
         //hp.transform.position.x = 0;
+
+
+        SaveFile();
+    }
+
+    public void SaveFile()
+    {
+        string destination = Application.persistentDataPath + "/asteroidSave.dat";
+        FileStream file;
+
+        if (File.Exists(destination)) file = File.OpenWrite(destination);
+        else file = File.Create(destination);
+
+        int data = health;
+
+        BinaryFormatter bf = new BinaryFormatter();
+        bf.Serialize(file, data);
+        file.Close();
     }
 
 
