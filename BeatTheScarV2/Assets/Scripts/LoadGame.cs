@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadGame : MonoBehaviour {
 
+    public Object scene;
+
 	public void OnClick()
     {
-        SceneManager.LoadScene("Planet1");
+        SceneManager.LoadScene(scene.name);
         //Destroy(SceneManager.)
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Planet1"));
     }

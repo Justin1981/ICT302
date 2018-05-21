@@ -8,16 +8,19 @@ using UnityEngine.UI;
 //thing seem to spawn around the holo lens
 //TODO: add more waves in, fix up the current waves
 public class newCubeScript : MonoBehaviour {
-    public Transform Astroid;
+    //public Transform Astroid;
+    public GameObject[] asteroids;
+    
     //Text position;
     TextMesh position;
     public float spawnRate;
     public float startTime;
     public float xmin, xmax, ymin, ymax;
+
+    int prefab_num;
     // Use this for initialization
     void Start()
     {
-       // startTime = Time.time;
         InvokeRepeating("CreateSpheres", startTime, spawnRate);
     }
 
@@ -36,12 +39,18 @@ public class newCubeScript : MonoBehaviour {
 
         //Random.RandomRange(-2, 2);
 
+        //randomises spawn of given gameobjects
+        prefab_num = Random.Range(0, 3);
 
         //Instantiate(Astroid, new Vector3(Random.Range(-2, 2), Random.Range(-5, 1), 3), Quaternion.identity);
         //uncomment out below when ready to use unity for setting values
         //Vector3 position = new Vector3(Random.Range(xmin, xmax), Random.Range(ymin, ymax), 3);
-        Vector3 position = new Vector3(Random.Range(-1f, 1f), Random.Range(-0.5f, 1f), 6);
-        Instantiate(Astroid, position, Quaternion.identity);
+
+        Vector3 position = new Vector3(Random.Range(-1f, 1f), Random.Range(-0.5f, 0.5f), 6);
+        //change scale of prefabs
+        asteroids[prefab_num].transform.localScale = new Vector3(Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f));
+        Instantiate(asteroids[prefab_num], position, Quaternion.identity);
+        
         
     }
 
