@@ -560,6 +560,7 @@
     <Compile Include="Assets\Scripts\LoadStats.cs" />
     <Compile Include="Assets\Scripts\movement.cs" />
     <Compile Include="Assets\Scripts\newCubeScript.cs" />
+    <Compile Include="Assets\Scripts\PlayMenuSound.cs" />
     <Compile Include="Assets\Scripts\ResumeGame.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFConstant.cginc" />
