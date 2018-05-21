@@ -188,20 +188,21 @@ public class GameController : MonoBehaviour
             //playerHitPlaneOn = true;
             //playerHitPlane.SetActive(true);
             //StartCoroutine(FlashPlayerHitPlane());
+            if (!playerHitPlaneOn)
+            {
+                ScoreText.text = "playerHitPlaneON";
+                //playerHitPlane.SetActive(true);
+                playerHitPlaneOn = true;
+                
 
-            //if(playerHitPlaneOn)
-            //{
-            //    ScoreText.text = "playerHitPlaneOFF";
-            //    playerHitPlane.SetActive(false);
-            //    playerHitPlaneOn = false;
-            //}
-            //if(!playerHitPlaneOn)
-            //{
-            //    ScoreText.text = "playerHitPlaneON";
-            //    playerHitPlane.SetActive(true);
-            //    playerHitPlaneOn = true;
+            }
+            else if (playerHitPlaneOn)
+            {
+                ScoreText.text = "playerHitPlaneOFF";
+                //playerHitPlane.SetActive(false);
+                playerHitPlaneOn = false;
+            }
 
-            //}
         }
 
         if (!player.Alive() && !gameOver)
