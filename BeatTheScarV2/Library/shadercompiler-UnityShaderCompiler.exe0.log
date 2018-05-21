@@ -1,5 +1,6 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: compileSnippet
@@ -25,3 +26,10 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=4 type=1 insize=19354 outsize=986 kw=UNITY_PASS_FORWARDBASE INSTANCING_ON _ALPHABLEND_ON _BORDER_LIGHT_USES_HOVER_COLOR _METALLIC_TEXTURE_ALBEDO_CHANNEL_A _HOVER_COLOR_OVERRIDE _BORDER_LIGHT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=1
 Cmd: initializeCompiler
+=======
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+>>>>>>> master
