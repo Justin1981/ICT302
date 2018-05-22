@@ -14,6 +14,9 @@ public class HeadColl : MonoBehaviour {
 
     public Transform PlayerPosition;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     // Use this for initialization
     void Start () {
 
@@ -32,6 +35,7 @@ public class HeadColl : MonoBehaviour {
         Collider[] hit = Physics.OverlapBox(headPosition, transform.localScale / 2);
         if (hit.Length > 0)
         {
+            source.PlayOneShot(clip);
             Debug.Log("collision");
             //destroy all hit in thet frame
             for (int i = 0; i < hit.Length; i++)

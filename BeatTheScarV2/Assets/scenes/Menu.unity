@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: 88ad799c5e4a91547bbd4e1d40b3ff10, type: 3}
-  SceneName: Planet1
+  SceneName: Statistics
 --- !u!114 &250595918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: ae52d8d2c24bcd041af5b1f1728f9d11, type: 3}
-  SceneName: Menu
+  SceneName: Options
 --- !u!82 &358724789
 AudioSource:
   m_ObjectHideFlags: 0
@@ -472,7 +472,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 784281905}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &784281907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +680,11 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: Instructions
+      objectReference: {fileID: 0}
+    - target: {fileID: 114934800942982784, guid: f3545e470cda7bb49ae02d63a4b37cbb,
+        type: 2}
+      propertyPath: TagalongDistance
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114686703239665938, guid: f3545e470cda7bb49ae02d63a4b37cbb, type: 2}
@@ -1265,6 +1270,11 @@ Prefab:
     - target: {fileID: 4541142303025740, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 81867938468442352, guid: d29bc40b7f3df26479d6a0aac211c355,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
