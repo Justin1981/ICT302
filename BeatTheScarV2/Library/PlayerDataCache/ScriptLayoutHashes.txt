@@ -7,6 +7,7 @@ Assets/scenes/Options.unity
 Assets/scenes/Statistics.unity
 Assets/_Scenes/Planet1.unity
 Assets/scenes/asteroid.unity
+Assets/Scene/Warmup.unity
 SceneListEnd?
 7abde016883951c4ca4e7c44ce6adb2c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLauncher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmoHandle
@@ -353,3 +354,8 @@ ecc14250990e8ffd4a0bb635da7c50c3 Assembly-CSharp.dll:HoloToolkit.Unity.AtlasPref
 7a01dd6ff9e8a779842b24e9e12329f2 Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxRig
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LineBaseEditor
 b74d6034034deeffc1401e25ca9027a5 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.CompoundButton
+608c8f207853357b4f66f16146bbbf1e Assembly-CSharp.dll:.ChargeBar
+dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.RotationAnimate
+f15119f31aa46ec54ef4469736763beb Assembly-CSharp.dll:.GameControlWarmup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NextStretch
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadPlanet
