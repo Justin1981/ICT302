@@ -7,10 +7,17 @@ public class LoadGame : MonoBehaviour {
 
     public Object scene;
 
+    public string SceneName;
+
 	public void OnClick()
     {
-        SceneManager.LoadScene(scene.name);
+        //SceneManager.LoadScene(scene.name);
         //Destroy(SceneManager.)
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Planet1"));
+
+        if(SceneName != null)
+        {
+            SceneManager.LoadScene(SceneName);
+        }
     }
 }

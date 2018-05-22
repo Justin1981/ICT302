@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: 88ad799c5e4a91547bbd4e1d40b3ff10, type: 3}
+  SceneName: Planet1
 --- !u!114 &250595918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: ae52d8d2c24bcd041af5b1f1728f9d11, type: 3}
+  SceneName: Menu
 --- !u!82 &358724789
 AudioSource:
   m_ObjectHideFlags: 0
@@ -783,6 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: 508684e12a2b63f499aa81bfc7ac0b26, type: 3}
+  SceneName: asteroid
 --- !u!114 &1390243176
 MonoBehaviour:
   m_ObjectHideFlags: 0
