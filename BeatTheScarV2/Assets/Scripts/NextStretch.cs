@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using HoloToolkit.Unity.InputModule;
 
-public class NextStretch : MonoBehaviour, IInputClickHandler {
+public class NextStretch : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +15,8 @@ public class NextStretch : MonoBehaviour, IInputClickHandler {
 		
 	}
 
-    public void OnInputClicked(InputClickedEventData eventData)
-    {
-        GameControlWarmup.Instance.stretchComplete();
-    }
+    //public void OnInputClicked(InputClickedEventData eventData)
+    //{
+    //    GameControlWarmup.Instance.stretchComplete();
+    //}
 }

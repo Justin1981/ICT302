@@ -8,17 +8,18 @@ using HoloToolkit.Unity.InputModule;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.WSA.Input;
 
+
 public class GameControlWarmup : MonoBehaviour {
-    [SerializeField]
+    //[SerializeField]
     private int currentStretch;
-    [SerializeField]
+    //[SerializeField]
     private float chargeLeft;
-    [SerializeField]
+    //[SerializeField]
     private List<string> listOfEx = new List<string>();
-    [SerializeField]
+    //[SerializeField]
     private int stretchCount;
-    private static GameControlWarmup instance;
-    [SerializeField]
+    //private static GameControlWarmup instance;
+    //[SerializeField]
     private float timer;
     public List<GameObject> stretchObjects = new List<GameObject>();
     private TextMesh nameStretchText;
@@ -27,7 +28,7 @@ public class GameControlWarmup : MonoBehaviour {
 
     public string SceneName;
 
-
+    private bool warmupComp;
 
     /////////////////////////////////////////////////////////////////
 
@@ -39,23 +40,23 @@ public class GameControlWarmup : MonoBehaviour {
 
 
 
-    public static GameControlWarmup Instance
-    {
-        get
-        {
-            if (instance != null)
-            {
-                return instance;
-            }
-            else
-            {
-                GameObject go = GameObject.FindGameObjectWithTag("GameControlWarmup");
-                instance = go.GetComponent<GameControlWarmup>();
+    //public static GameControlWarmup Instance
+    //{
+    //    get
+    //    {
+    //        if (instance != null)
+    //        {
+    //            return instance;
+    //        }
+    //        else
+    //        {
+    //            GameObject go = GameObject.FindGameObjectWithTag("GameControlWarmup");
+    //            instance = go.GetComponent<GameControlWarmup>();
 
-                return instance;
-            }
-        }
-    }
+    //            return instance;
+    //        }
+    //    }
+    //}
 
 	void Start () {
 
@@ -85,6 +86,9 @@ public class GameControlWarmup : MonoBehaviour {
         }
         FindTextObjects();
         UpdateUI();
+
+        warmupComp = false;
+        timer = 0;
 	}
 
     private void FindTextObjects()
@@ -96,13 +100,21 @@ public class GameControlWarmup : MonoBehaviour {
 
     void Update()
     {
-        timer += Time.deltaTime;
-        UpdateTimer(timer);
+        if (!warmupComp)
+        {
+            timer += Time.deltaTime;
+            UpdateTimer(timer);
+        }
+        else
+        {
+            WarmUpComplete();
+        }
     }
 
     private void UpdateTimer(float timer)
     {
-        timerText.text = "Time: " + (int)this.timer;
+        //timerText.text = "Time: " + (int)this.timer;
+        timerText.text = "Time: " + (int)timer;
     }
 
     public void stretchComplete()
@@ -114,24 +126,25 @@ public class GameControlWarmup : MonoBehaviour {
             stretchCount++;
         }
 
-        InputManager.Instance.PushInputDisable();
+        //InputManager.Instance.PushInputDisable();
         if (stretchCount == listOfEx.Count)
         {
-            WarmUpComplete();
-            if (!InputManager.Instance.IsInputEnabled)
-            {
-                InputManager.Instance.PopInputDisable();
-            }
+            warmupComp = true;
+            //WarmUpComplete();
+            //if (!InputManager.Instance.IsInputEnabled)
+            //{
+            //    InputManager.Instance.PopInputDisable();
+            //}
         }
         else
         {
             stretchObjects[stretchCount].transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
 
             stretchObjects[stretchCount].transform.GetChild(0).GetComponent<MeshRenderer>().enabled = enabled;
-            if (!InputManager.Instance.IsInputEnabled)
-            {
-                InputManager.Instance.PopInputDisable();
-            }
+            //if (!InputManager.Instance.IsInputEnabled)
+            //{
+            //    InputManager.Instance.PopInputDisable();
+            //}
         }
         UpdateUI();
     }
@@ -150,9 +163,11 @@ public class GameControlWarmup : MonoBehaviour {
         Debug.Log("Warm Up is Completed");
         //SaveStats(listOfEx);//////////////////////////////////////////////////
 
+        
+
         SceneManager.LoadScene(SceneName);
 
-
+        Debug.Log("Warmup Called");
         //Application.Quit(); // CHANGE THIS TO LOAD NEXT SCENE OR CONTINUE SCREEN
         //UnityEditor.EditorApplication.isPlaying = false;
 
@@ -188,6 +203,9 @@ public class GameControlWarmup : MonoBehaviour {
 
     private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
     {
-        stretchComplete();
+        if (!warmupComp)
+        {
+            stretchComplete();
+        }
     }
 }

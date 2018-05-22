@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timeLeft -= Time.deltaTime;
-        Debug.Log(timeLeft);
+        ///Debug.Log(timeLeft);
         if(timeLeft <= 0)
         {
             GameOver();
