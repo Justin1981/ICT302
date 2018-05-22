@@ -11,6 +11,9 @@ using UnityEngine.SceneManagement;
 public class HeadColl : MonoBehaviour {
     public int health;
     public Text hp;
+
+    public Transform PlayerPosition;
+
     // Use this for initialization
     void Start () {
 
@@ -19,10 +22,14 @@ public class HeadColl : MonoBehaviour {
     // Update is called once per frame
 	void Update () {
         //position of holo lens
-        var headPosition = Camera.main.transform.position;
+        //var headPosition = Camera.main.transform.position;
+
+        var headPosition = PlayerPosition.position;
+
         //Collider[] hit = Physics.OverlapSphere(transform.position, 0.05f);
         //checking for hit boxes in the area
-        Collider[] hit = Physics.OverlapBox(transform.position, transform.localScale/2);
+        //Collider[] hit = Physics.OverlapBox(transform.position, transform.localScale/2);
+        Collider[] hit = Physics.OverlapBox(headPosition, transform.localScale / 2);
         if (hit.Length > 0)
         {
             Debug.Log("collision");

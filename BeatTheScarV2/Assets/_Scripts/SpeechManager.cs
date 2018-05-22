@@ -41,6 +41,14 @@ public class SpeechManager : MonoBehaviour
             gameController.Pause();
         });
 
+        keywords.Add("Unpause", () =>
+        {
+            // call the OnReset method on every descendant object
+            //this.BroadcastMessage("OnReset");
+
+            gameController.Unpause();
+        });
+
         //keywords.Add("Drop Sphere", () =>
         //{
         //    var focusObject = GazeGestureManager.Instance.FocusedObject;
