@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 26
-    y: 51
+    x: 24
+    y: 43
     width: 1896
     height: 1007
   m_ShowMode: 4
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 51
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 52
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,8 +306,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 26
-    y: 679
+    x: 24
+    y: 671
     width: 1509
     height: 357
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -323,20 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Asteroids
+    - Assets/_Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Asteroids
+  - Assets/_Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Justin\Uni\GitHub\ICT302\BeatTheScarV2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de1a0000
-    m_LastClickedID: 6878
-    m_ExpandedIDs: 0000000070190000361a0000da1a0000f61b0000e8210000e2220000f62400007825000000ca9a3bffffff7f
+    m_SelectedIDs: 98450000
+    m_LastClickedID: 17816
+    m_ExpandedIDs: 000000007c3a00003e3b0000e03b0000f63c0000cc420000c44300005246000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070190000361a0000da1a0000f61b0000e8210000e222000078250000
+    m_ExpandedIDs: 000000007c3a00003e3b0000e03b0000f63c0000cc420000c4430000d045000052460000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -395,18 +395,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Asteroids
-      m_OriginalName: Asteroids
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 6878
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -439,8 +439,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1539
-    y: 100
+    x: 1537
+    y: 92
     width: 383
     height: 936
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -473,30 +473,30 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 26
-    y: 100
+    x: 24
+    y: 92
     width: 372
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 64d50000
-    m_LastClickedID: 54628
-    m_ExpandedIDs: 7e80fbff6281fbffd884fbfffe84fbfffa85fbfff686fbff7c88fbff84aafbff56c9fbff3ccafbff9eccfbffdecdfbffcacefbffb6cffbff28d1fbff96dbfbff98dbfbff9eeffbff9af0fbff00f4fbff16f4fbff02f5fbffeef5fbff64f7fbff6410fcff6011fcffc614fcffdc14fcffc815fcffb416fcff2a18fcffa260fdff2268fdff0869fdff6a6bfdffaa6cfdff966dfdff826efdfff46ffdff5c76fdffa681fdff5e96fdff5497fdffb699fdfff69afdffe29bfdffce9cfdff409efdffd8e9fdffbeeafdff22edfdff62eefdff4eeffdff3af0fdffacf1fdffcc19feffb21afeff161dfeff561efeff421ffeff2e20feffa021feff2a37feff163ffefffe3ffeff6c43feffb044feffa045feff9046feff9e46feffb84afeff024efeff1a53feffec5afeff7e8dfeff668efeffcc91feff0c93fefff893feffe494feffee94feff76bafeff78bafeff76cffeff4ed6feff38d7feff9edafeffdedbfeffcadcfeffb6ddfeffc0ddfeff7ef9feff80f9feff984cffff924dfffff44fffff3451ffff2052ffff0c53ffff7c54ffff7e6dffff1674ffff0075ffff6678ffffa679ffff927affff7e7bffff887bffff628fffff648fffff5693ffff609effff26a4ffff10a5ffff76a8ffffb6a9ffffa2aaffff8eabffff98abfffffac1fffffcc1ffffa2cbffffa2ccffff08d0ffff1ed0ffff0ad1fffff6d1ffff6cd3ffffcadcffffccddffff32e1ffff48e1ffff34e2ffff20e3ffff96e4ffff20fbffff22fbffffdafbffff00000000f2590000045a000088620000d4690000986f0000c06f0000da6f00005c7000001c7100009e78000098790000949f000050a0000040a70000e0a7000018a800006aad000090b600000abd0000
+    m_SelectedIDs: 500d0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: a2e4ffff88e5ffffeee8ffff04e9fffff0e9ffffdceaffff52ecffff9efaffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PlayerHitImage
-      m_OriginalName: PlayerHitImage
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 48758
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -526,8 +526,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 402
-    y: 100
+    x: 400
+    y: 92
     width: 1133
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.15031704, y: 0.4504077, z: -0.07722733, w: -0.87668455}
     speed: 2
-    m_Value: {x: -0.15031688, y: 0.45040724, z: -0.07722725, w: -0.8766836}
+    m_Value: {x: -0.15031704, y: 0.45040774, z: -0.07722733, w: -0.8766845}
   m_Size:
     m_Target: 79.75613
     speed: 2
