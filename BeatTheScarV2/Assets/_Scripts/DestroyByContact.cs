@@ -19,7 +19,7 @@ public class DestroyByContact : MonoBehaviour
         }
         if(gameController == null)
         {
-            Debug.Log("'GameControlWarmup' script not found");
+            Debug.Log("'GameControl' script not found");
         }
     }
 

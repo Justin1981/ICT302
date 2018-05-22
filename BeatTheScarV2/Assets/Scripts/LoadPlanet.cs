@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using UnityEngine.UI;
+
 public class LoadPlanet : MonoBehaviour {
 
     //public Object scene;
 
-    //public string SceneName;
+    public Text Debug;
 
 	public void OnClick()
     {
@@ -17,7 +19,11 @@ public class LoadPlanet : MonoBehaviour {
 
         //if(SceneName != null)
         //{
-            SceneManager.LoadScene("Planet1");
+
+        Debug.text += "OnClick Called ";
+
+
+        //SceneManager.LoadScene("Planet1");
         //}
     }
 }
