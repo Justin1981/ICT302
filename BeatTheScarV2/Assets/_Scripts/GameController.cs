@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    
     public GameObject[] Hazards;
     public Vector3 SpawnValues;
     public int HazardCount;
@@ -19,24 +20,21 @@ public class GameController : MonoBehaviour
     public Text ScoreText;
     public Text RestartText;
     public Text GameOverText;
-    //public Text PlayerHealthText;
 
     private int score;
     private bool gameOver;
     private bool restart;
     private bool pause;
-    //private int playerHealth;
+
 
     private PlayerController player;
 
     private GestureRecognizer gestureRecognizer;
 
-    private GameObject playerHitPlane;
-    private bool playerHitPlaneOn;
-    private int playerHitPlaneCount;
-
     void Start()
     {
+
+
         // Set up GestureRecognizer to register the users finger taps
         gestureRecognizer = new GestureRecognizer();
         gestureRecognizer.TappedEvent += GestureRecognizerOnTappedEvent;
@@ -44,6 +42,7 @@ public class GameController : MonoBehaviour
         gestureRecognizer.StartCapturingGestures();
 
         GameObject gcObj = GameObject.FindGameObjectWithTag("Player");
+        //GameOverText.text += "Test for NULL ";
         if (gcObj != null)
         {
             player = gcObj.GetComponent<PlayerController>();
@@ -52,10 +51,6 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("'PlayerController' script not found");
         }
-
-        playerHitPlane = GameObject.FindGameObjectWithTag("PlayerHitPlane");
-        playerHitPlaneOn = false;
-        playerHitPlaneCount = 0;
 
 
         gameOver = false;
@@ -66,9 +61,6 @@ public class GameController : MonoBehaviour
         score = 0;
         PrintScore();
         StartCoroutine(SpawnWaves());
-
-        //playerHealth = 100;
-        //PrintPlayerHealth();
 
 
         //InteractionManager.SourcePressed += GetPosition;
@@ -103,22 +95,7 @@ public class GameController : MonoBehaviour
         //    GameOver();
         //}
 
-        //if(playerHitPlaneOn && !playerHitPlane.activeSelf)
-        //{
-        //    playerHitPlane.SetActive(true);
-        //}
 
-        //if(playerHitPlane.activeSelf)
-        //{
-        //    playerHitPlaneCount++;
-        //}
-
-        //if(playerHitPlaneCount > 500)
-        //{
-        //    playerHitPlaneOn = false;
-        //    playerHitPlane.SetActive(false);
-        //    playerHitPlaneCount = 0;
-        //}
 
         
 
@@ -135,7 +112,6 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
-        //Instantiate(player.PlayerExplosion, player.transform.position, player.transform.rotation);
 
         GameOverText.text = "Game Over";
         gameOver = true;
@@ -181,28 +157,9 @@ public class GameController : MonoBehaviour
 
     public void PlayerHit()
     {
-
-        if(player.Alive())
+        if (player.Alive())
         {
             player.TakeDamage(10);
-            //playerHitPlaneOn = true;
-            //playerHitPlane.SetActive(true);
-            //StartCoroutine(FlashPlayerHitPlane());
-            if (!playerHitPlaneOn)
-            {
-                ScoreText.text = "playerHitPlaneON";
-                //playerHitPlane.SetActive(true);
-                playerHitPlaneOn = true;
-                
-
-            }
-            else if (playerHitPlaneOn)
-            {
-                ScoreText.text = "playerHitPlaneOFF";
-                //playerHitPlane.SetActive(false);
-                playerHitPlaneOn = false;
-            }
-
         }
 
         if (!player.Alive() && !gameOver)
@@ -211,14 +168,6 @@ public class GameController : MonoBehaviour
         }
 
     }
-
-    //private IEnumerator FlashPlayerHitPlane()
-    //{
-    //    ScoreText.text = "FlashPlayerHitPlane";
-    //    playerHitPlane.SetActive(true);
-    //    yield return new WaitForSeconds(5);
-    //    playerHitPlane.SetActive(false);
-    //}
 
 
     public void Restart()
@@ -231,9 +180,11 @@ public class GameController : MonoBehaviour
 
     public void Pause()
     {
-        if (Time.timeScale == 1)
-            Time.timeScale = 0;
-        else
-            Time.timeScale = 1;
+        Time.timeScale = 0;
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1;
     }
 }

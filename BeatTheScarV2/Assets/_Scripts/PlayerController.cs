@@ -15,9 +15,11 @@ public class PlayerController : MonoBehaviour
 
     public Transform PlayerPosition;
     public GameObject PlayerExplosion;
+    public GameObject PlayerHitImage;
+    public int PlayerHitImageFlashTime = 1;
 
     public int StartingHealth = 100;
-    
+
     public Slider HealthSlider;
     public Text PlayerHealthText;
 
@@ -26,25 +28,23 @@ public class PlayerController : MonoBehaviour
     ///public float FireForce = 1.0f;
     public GameObject ShotPrefab;
 
-    //private GestureRecognizer gestureRecognizer;
-
     public int CurrentHealth;
     private bool damaged;
     private bool alive;
+    private int playerHitInstantCount;
 
     // Use this for initialization
     void Start()
     {
-        //// Set up GestureRecognizer to register the users finger taps
-        //gestureRecognizer = new GestureRecognizer();
-        //gestureRecognizer.TappedEvent += GestureRecognizerOnTappedEvent;
-        //gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
-        //gestureRecognizer.StartCapturingGestures();
 
         CurrentHealth = StartingHealth;
         UpdateHealthBar();
         damaged = false;
         alive = true;
+
+        playerHitInstantCount = 0;
+
+        PlayerHitImage.SetActive(false);
     }
 
     void Update()
@@ -59,10 +59,6 @@ public class PlayerController : MonoBehaviour
         posText.text = "Pos: " + PlayerPosition.position.ToString();
     }
 
-    //private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
-    //{
-    //    Shoot();
-    //}
 
     // This method will be publicly accessible to allow for voice-activated firing
     public void Shoot()
@@ -93,6 +89,8 @@ public class PlayerController : MonoBehaviour
     {
         damaged = true;
 
+        StartCoroutine(FlashPlayerHitImage());
+
         CurrentHealth -= amount;
 
         UpdateHealthBar();
@@ -105,6 +103,27 @@ public class PlayerController : MonoBehaviour
 
         }
 
+    }
+
+    private IEnumerator FlashPlayerHitImage()
+    {
+        //ScoreText.text = "FlashPlayerHitPlane";
+        if (PlayerHitImage != null)
+        {
+            PlayerHitImage.SetActive(true);
+            playerHitInstantCount++;
+            GetComponent<AudioSource>().Play();
+
+            yield return new WaitForSeconds(PlayerHitImageFlashTime);
+
+            playerHitInstantCount--;
+
+            if (playerHitInstantCount <= 0)
+            {
+                PlayerHitImage.SetActive(false);
+                playerHitInstantCount = 0;
+            }
+        }
     }
 
     private void Death()
