@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Planet1.unity
+- path: Assets/_Scenes/Warmup.unity
   isLoaded: 1
   isActive: 1

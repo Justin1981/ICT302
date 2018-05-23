@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - PlayerHitPlane
   - HUD
+  - Pause
   layers:
   - Default
   - TransparentFX
