@@ -32,9 +32,21 @@ public class GameController : MonoBehaviour
 
     private GestureRecognizer gestureRecognizer;
 
+    private Vector3 handPosition;
+
     void Start()
     {
+        // Setting up events for the interaction manager
+        //InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
+        //InteractionManager.InteractionSourceLost += SourceManager_SourceLost;
+        //InteractionManager.InteractionSourcePressed += SourceManager_SourcePressed;
+        //InteractionManager.InteractionSourceReleased += SourceManager_SourceReleased;
+        InteractionManager.InteractionSourceUpdated += SourceManager_SourceUpdated;
+        InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
 
+        InteractionManager.GetCurrentReading();
+
+        HandText.text = "Nothing Detected";
 
         // Set up GestureRecognizer to register the users finger taps
         gestureRecognizer = new GestureRecognizer();
@@ -63,63 +75,61 @@ public class GameController : MonoBehaviour
         PrintScore();
         StartCoroutine(SpawnWaves());
 
+    }
 
+    private void SourceManager_SourceDetected(InteractionSourceDetectedEventArgs obj)
+    {
+        if (obj.state.source.kind != InteractionSourceKind.Hand)
+        {
+            return;
+        }
+        //trackedHands.Add(state.source.id);
 
-
-
-
-        // Setting up events for the interaction manager
-        //InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
-        //InteractionManager.InteractionSourceLost += SourceManager_SourceLost;
-        //InteractionManager.InteractionSourcePressed += SourceManager_SourcePressed;
-        //InteractionManager.InteractionSourceReleased += SourceManager_SourceReleased;
-        InteractionManager.InteractionSourceUpdated += SourceManager_SourceUpdated;
-
-        InteractionManager.GetCurrentReading();
-
-        HandText.text = "Nothing Detected";
-
+        //var obj = Instantiate(TrackingObject) as GameObject;
+        //Vector3 pos;
+        //if (state.properties.location.TryGetPosition(out pos))
+        //{
+        //    obj.transform.position = pos;
+        //}
+        //trackingObject.Add(state.source.id, obj);
     }
 
     private void SourceManager_SourceUpdated(InteractionSourceUpdatedEventArgs obj)
     {
         InteractionSourcePose statePose = obj.state.sourcePose;
 
-        if (obj.state.source.handedness == InteractionSourceHandedness.Right)
-        {
-            HandText.text = "Right Detected";
-        }
+        //if (obj.state.source.handedness == InteractionSourceHandedness.Right)
+        //{
+        //    HandText.text = "Right Detected";
+        //}
 
-        if (obj.state.source.handedness == InteractionSourceHandedness.Left)
-        {
-            HandText.text = "Left Detected";
-        }
+        //if (obj.state.source.handedness == InteractionSourceHandedness.Left)
+        //{
+        //    HandText.text = "Left Detected";
+        //}
 
-        if (obj.state.source.handedness == InteractionSourceHandedness.Unknown)
-        {
-            HandText.text = "Unknown Detected";
-        }
+        //if (obj.state.source.handedness == InteractionSourceHandedness.Unknown)
+        //{
+        //    HandText.text = "Unknown Detected";
+        //}
+
+        obj.state.sourcePose.TryGetPosition(out handPosition);
+
+
     }
 
-        void Update()
+    void OnDestroy()
     {
-        //if(restart)
-        //{
-        //    if(Input.GetKeyDown(KeyCode.R))
-        //    {
-        //        //Application.LoadLevel(Application.loadedLevel);
-        //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //    }
-        //}
+        InteractionManager.InteractionSourceUpdated -= SourceManager_SourceUpdated;
+        gestureRecognizer.TappedEvent -= GestureRecognizerOnTappedEvent;
+    }
 
-        //if (!player.Alive() && !gameOver)
-        //{
-        //    GameOver();
-        //}
+    void Update()
+    {
 
+        InteractionManager.GetCurrentReading();
 
-
-        
+        HandText.text = handPosition.ToString();
 
     }
 
@@ -209,4 +219,7 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
+
+
 }

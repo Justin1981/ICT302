@@ -208,4 +208,10 @@ public class GameControlWarmup : MonoBehaviour {
             stretchComplete();
         }
     }
+
+    void OnDestroy()
+    {
+        
+        gestureRecognizer.TappedEvent -= GestureRecognizerOnTappedEvent;
+    }
 }
