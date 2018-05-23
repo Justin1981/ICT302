@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/scenes/asteroid.unity
     guid: 508684e12a2b63f499aa81bfc7ac0b26
   - enabled: 1
-    path: Assets/Scene/Warmup.unity
+    path: Assets/_Scenes/Warmup.unity
     guid: 7ebb31ce5437e704ba80d5fb1d14abd4
+  - enabled: 1
+    path: Assets/scenes/GameSelect.unity
+    guid: 9e965f32a55d63d46b5a8856004b45e8
   m_configObjects: {}
