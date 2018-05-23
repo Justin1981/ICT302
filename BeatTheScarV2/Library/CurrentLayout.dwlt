@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1896
     height: 957
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 26
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1512
     height: 957
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 67
+  controlID: 68
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 0
     width: 1512
     height: 579
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 68
+  controlID: 69
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,8 +252,8 @@ MonoBehaviour:
     y: 0
     width: 1138
     height: 579
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -323,20 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/_Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/_Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Justin\Uni\GitHub\ICT302\BeatTheScarV2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 58240000
-    m_LastClickedID: 9304
-    m_ExpandedIDs: 0000000068190000a61a0000aa1a0000b81b0000901e00002a210000f82100000c2200008c49000000ca9a3bffffff7f
+    m_SelectedIDs: 501b0000
+    m_LastClickedID: 6992
+    m_ExpandedIDs: 0000000068190000a61a0000aa1a0000b81b0000901e000028210000f62100000a220000824a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000068190000a61a0000aa1a0000b81b0000901e00002a2100000c220000e62300008c490000
+    m_ExpandedIDs: 0000000068190000a61a0000aa1a0000b81b0000901e000028210000f62100000a220000824a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -482,26 +482,26 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 56adfdff5caefdffc4b0fdffd2b1fdff12b3fdfffeb3fdffeab4fdff68b6fdff6a0afeffc216feffca17feff5c1bfeff641bfeffa41cfeff901dfeff7c1efeffee1ffeff1e80feff348efeff3c8ffeffa291feffb292fefff293feffde94feffca95feff4897feff509efeff589ffeffbea1feffcea2feff0ea4fefffaa4feffe6a5feff64a7feffc6c2feffaac3feff0ac6feff1ac7feff5ac8feff46c9feff32cafeffb0cbfeff7ad7feff5ed8feffbedafeffcedbfeff0eddfefffaddfeffe6defeff64e0feff100bffff5811fffff416ffffb817ffff7e44ffff4245ffffa247ffffb248fffff249ffffde4affffca4bffff484dffffd084ffffb08effffbc8fffff5693ffff6694ffffa695ffff9296ffff7e97ffff8897ffffb4d0ffffa2d1ffffa4d1fffff8e0ffff04e2ffffa2e5ffffaee5fffff2e6ffffe2e7ffffd2e8ffff4aeaffffeafbffff00000000c8510000b0590000326400003e6400004c6400000e650000906600000a8600001a860000268600002a8e0000828e0000
+    m_ExpandedIDs: 723affff563bffffe83efffff63fffff0c40fffff840ffffe441ffff5a43ffff8cb2ffff86baffff34caffff1ecbffffc0ceffffdecfffff04d0ffff00d1fffffcd1ffff82d3ffffeafbffff0000000014530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ChargeBars
-      m_OriginalName: ChargeBars
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 36442
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - Warmup
+  - Planet1
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -532,14 +532,14 @@ MonoBehaviour:
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 12969.083748
+  lastFramingTime: 1392.7754321999998
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0.31}
+    m_Target: {x: -0.45929062, y: -0.1771698, z: 2}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0.31}
+    m_Value: {x: -0.45929062, y: -0.1771698, z: 2}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -569,11 +569,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.38735995, y: -0.013277706, z: 0.0055794166, w: -0.92181695}
     speed: 2
-    m_Value: {x: -0.38735962, y: -0.013277695, z: 0.005579412, w: -0.9218162}
+    m_Value: {x: -0.38735995, y: -0.013277705, z: 0.0055794166, w: -0.9218169}
   m_Size:
-    m_Target: 13.401848
+    m_Target: 0.3537625
     speed: 2
-    m_Value: 13.401848
+    m_Value: 0.3537625
   m_Ortho:
     m_Target: 0
     speed: 2
