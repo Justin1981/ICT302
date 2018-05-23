@@ -561,6 +561,7 @@
      <Compile Include="Assets\Scripts\ResumeGame.cs" />
      <Compile Include="Assets\Scripts\RotationAnimate.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\Scripts\TogglePause.cs" />
      <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFConstant.cginc" />
      <None Include="Assets\Shaders\OccusionRim.shader" />
      <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\UnlitConfigurable.shader" />
