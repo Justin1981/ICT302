@@ -203,11 +203,17 @@ public class GameController : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0;
+        //togglePause.showPaused();
+        //Ps.SetActive(true);
+        GetComponent<TogglePause>().showPaused();
     }
 
     public void Unpause()
     {
+        GetComponent<TogglePause>().hidePaused();
         Time.timeScale = 1;
+        //togglePause.hidePaused();
+        //Ps.SetActive(false);
     }
 
 
