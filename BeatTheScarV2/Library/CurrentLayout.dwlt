@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
-    width: 1366
-    height: 725
+    x: 32
+    y: 51
+    width: 1880
+    height: 991
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -41,14 +41,6 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
-    width: 1366
-    height: 675
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
-  vertical: 0
-  controlID: 54
-=======
-<<<<<<< HEAD
     width: 1896
     height: 957
   m_MinSize: {x: 679, y: 492}
@@ -63,7 +55,6 @@ MonoBehaviour:
   vertical: 0
   controlID: 9
 >>>>>>> master
->>>>>>> Planet1R18
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -78,12 +69,8 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1089
+    x: 1499
     y: 0
-<<<<<<< HEAD
-    width: 277
-    height: 675
-=======
 <<<<<<< HEAD
     width: 384
     height: 957
@@ -91,7 +78,6 @@ MonoBehaviour:
     width: 381
     height: 941
 >>>>>>> master
->>>>>>> Planet1R18
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -116,12 +102,6 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
-    width: 270
-    height: 404
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-=======
-<<<<<<< HEAD
     width: 374
     height: 579
   m_MinSize: {x: 202, y: 221}
@@ -132,7 +112,6 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 >>>>>>> master
->>>>>>> Planet1R18
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -153,9 +132,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 404
-    width: 1089
-    height: 271
+    y: 569
+    width: 1499
+    height: 372
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 13}
@@ -184,17 +163,12 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
-    width: 1366
-    height: 725
-=======
-<<<<<<< HEAD
     width: 1896
     height: 1007
 =======
     width: 1880
     height: 991
 >>>>>>> master
->>>>>>> Planet1R18
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
@@ -213,7 +187,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1366
+    width: 1880
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -233,8 +207,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 705
-    width: 1366
+    y: 971
+    width: 1880
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -257,14 +231,6 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
-    width: 1089
-    height: 675
-  m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
-  vertical: 1
-  controlID: 55
-=======
-<<<<<<< HEAD
     width: 1512
     height: 957
   m_MinSize: {x: 402, y: 492}
@@ -279,7 +245,6 @@ MonoBehaviour:
   vertical: 1
   controlID: 85
 >>>>>>> master
->>>>>>> Planet1R18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,14 +264,6 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
-    width: 1089
-    height: 404
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
-  vertical: 0
-  controlID: 56
-=======
-<<<<<<< HEAD
     width: 1512
     height: 579
   m_MinSize: {x: 402, y: 221}
@@ -321,7 +278,6 @@ MonoBehaviour:
   vertical: 0
   controlID: 86
 >>>>>>> master
->>>>>>> Planet1R18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,12 +292,8 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 270
+    x: 371
     y: 0
-<<<<<<< HEAD
-    width: 819
-    height: 404
-=======
 <<<<<<< HEAD
     width: 1138
     height: 579
@@ -350,7 +302,6 @@ MonoBehaviour:
 =======
     width: 1128
     height: 569
->>>>>>> Planet1R18
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
 >>>>>>> master
@@ -406,10 +357,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 496
-    width: 1087
-    height: 250
+    x: 32
+    y: 669
+    width: 1497
+    height: 351
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -424,13 +375,6 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
-    - Assets/scenes
-  m_ViewMode: 1
-  m_StartGridSize: 16
-  m_LastFolders:
-  - Assets/scenes
-=======
-<<<<<<< HEAD
     - Assets/_Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
@@ -443,18 +387,11 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
 >>>>>>> master
->>>>>>> Planet1R18
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\iljas\Desktop\ict302Repos\BeatTheScarV2
+  m_LastProjectPath: C:\Users\Justin\Uni\GitHub\ICT302\BeatTheScarV2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
-    scrollPos: {x: 0, y: 55}
-    m_SelectedIDs: a0630000
-    m_LastClickedID: 25504
-    m_ExpandedIDs: 00000000ec5b0000e05c0000e45c00006c5d0000aa5f00003e610000d0610000e2610000c466000000ca9a3bffffff7f
-=======
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
     m_SelectedIDs: 8c450000
@@ -464,7 +401,6 @@ MonoBehaviour:
     m_LastClickedID: 15164
 >>>>>>> master
     m_ExpandedIDs: 000000003c3b00007c3c0000803c00008c3d00006c40000004430000d6430000e8430000344c000000ca9a3bffffff7f
->>>>>>> Planet1R18
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -492,7 +428,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ec5b0000e05c0000e45c00006c5d0000aa5f00003e610000d0610000e2610000c4660000
+    m_ExpandedIDs: 000000003c3b00007c3c0000803c00008c3d00006c40000004430000d6430000e8430000344c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,12 +458,8 @@ MonoBehaviour:
 <<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
 =======
-<<<<<<< HEAD
-    m_HadKeyboardFocusLastEvent: 1
-=======
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> master
->>>>>>> Planet1R18
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -579,10 +511,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1091
-    y: 92
-    width: 275
-    height: 654
+    x: 1533
+    y: 100
+    width: 379
+    height: 920
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -613,18 +545,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 92
-    width: 268
-    height: 383
+    x: 32
+    y: 100
+    width: 369
+    height: 548
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-    m_SelectedIDs: 94d1feff
-    m_LastClickedID: -77420
-    m_ExpandedIDs: ccd1feffced1feffd0d1feff1afdfeff1cfdfeff7efdfefffaaafffffcaaffff28acffff00000000
-=======
 <<<<<<< HEAD
     m_SelectedIDs: f0a60000
     m_LastClickedID: 42736
@@ -634,7 +561,6 @@ MonoBehaviour:
     m_LastClickedID: -1440
     m_ExpandedIDs: a0fbffff00000000
 >>>>>>> master
->>>>>>> Planet1R18
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -653,7 +579,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
-  - asteroid
+  - Planet1
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -678,10 +604,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 272
-    y: 92
-    width: 815
-    height: 383
+    x: 405
+    y: 100
+    width: 1124
+    height: 548
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
 <<<<<<< HEAD
@@ -740,16 +666,12 @@ MonoBehaviour:
 =======
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0, y: 0, z: -0, w: -1}
+    m_Value: {x: -0, y: -0, z: -0, w: -0.99999994}
   m_Size:
-    m_Target: -1.7267251
+    m_Target: 0.6732749
     speed: 2
-<<<<<<< HEAD
-    m_Value: -1.7267251
-=======
     m_Value: 0.6732749
 >>>>>>> master
->>>>>>> Planet1R18
   m_Ortho:
     m_Target: 0
     speed: 2
