@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public Text ScoreText;
     public Text RestartText;
     public Text GameOverText;
+    public Text HandText;
 
     private int score;
     private bool gameOver;
@@ -64,26 +65,43 @@ public class GameController : MonoBehaviour
 
 
 
-        
 
 
-        //InteractionManager.SourcePressed += GetPosition;
 
+        // Setting up events for the interaction manager
+        //InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
+        //InteractionManager.InteractionSourceLost += SourceManager_SourceLost;
+        //InteractionManager.InteractionSourcePressed += SourceManager_SourcePressed;
+        //InteractionManager.InteractionSourceReleased += SourceManager_SourceReleased;
+        InteractionManager.InteractionSourceUpdated += SourceManager_SourceUpdated;
 
-        //InteractionManager.InteractionSourcePressed += GetPosition;
+        InteractionManager.GetCurrentReading();
+
+        HandText.text = "Nothing Detected";
 
     }
 
-    //private void GetPosition(InteractionSourceState state)
-    //{
-    //    Vector3 pos;
-    //    if(state.sourcePose.TryGetPosition(out pos))
-    //    { 
+    private void SourceManager_SourceUpdated(InteractionSourceUpdatedEventArgs obj)
+    {
+        InteractionSourcePose statePose = obj.state.sourcePose;
 
-    //    }
-    //}
+        if (obj.state.source.handedness == InteractionSourceHandedness.Right)
+        {
+            HandText.text = "Right Detected";
+        }
 
-    void Update()
+        if (obj.state.source.handedness == InteractionSourceHandedness.Left)
+        {
+            HandText.text = "Left Detected";
+        }
+
+        if (obj.state.source.handedness == InteractionSourceHandedness.Unknown)
+        {
+            HandText.text = "Unknown Detected";
+        }
+    }
+
+        void Update()
     {
         //if(restart)
         //{
