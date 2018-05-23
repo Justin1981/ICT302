@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
         //InteractionManager.InteractionSourceReleased += SourceManager_SourceReleased;
         InteractionManager.InteractionSourceUpdated += SourceManager_SourceUpdated;
         InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
+        //InteractionManager.InteractionSourceLost += InteractionManager_InteractionSourceLost;
 
         InteractionManager.GetCurrentReading();
 
@@ -94,24 +95,12 @@ public class GameController : MonoBehaviour
         //trackingObject.Add(state.source.id, obj);
     }
 
+
+
     private void SourceManager_SourceUpdated(InteractionSourceUpdatedEventArgs obj)
     {
         InteractionSourcePose statePose = obj.state.sourcePose;
 
-        //if (obj.state.source.handedness == InteractionSourceHandedness.Right)
-        //{
-        //    HandText.text = "Right Detected";
-        //}
-
-        //if (obj.state.source.handedness == InteractionSourceHandedness.Left)
-        //{
-        //    HandText.text = "Left Detected";
-        //}
-
-        //if (obj.state.source.handedness == InteractionSourceHandedness.Unknown)
-        //{
-        //    HandText.text = "Unknown Detected";
-        //}
 
         obj.state.sourcePose.TryGetPosition(out handPosition);
 
@@ -140,6 +129,7 @@ public class GameController : MonoBehaviour
         {
             player.Shoot();
         }
+
     }
 
     public void GameOver()
