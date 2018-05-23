@@ -6,8 +6,6 @@ using UnityEngine.Windows.Speech;
 
 public class SpeechManager : MonoBehaviour
 {
-    
-
     KeywordRecognizer keywordRecognizer = null;
     Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
@@ -23,7 +21,7 @@ public class SpeechManager : MonoBehaviour
         }
         if (gameController == null)
         {
-            Debug.Log("'GameController' script not found");
+            Debug.Log("'GameControlWarmup' script not found");
         }
 
 
@@ -76,10 +74,5 @@ public class SpeechManager : MonoBehaviour
         {
             keywordAction.Invoke();
         }
-    }
-
-    void OnDestroy()
-    {
-        keywordRecognizer.OnPhraseRecognized -= KeywordRecognizer_OnPhraseRecognized;
     }
 }
