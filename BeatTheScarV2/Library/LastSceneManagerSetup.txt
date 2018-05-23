@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/scenes/Menu.unity
+=======
+- path: Assets/_Scenes/Warmup.unity
+>>>>>>> 3ca0bd78d62f0999a3d9b2a8a80e5d26a79b957c
   isLoaded: 1
   isActive: 1
