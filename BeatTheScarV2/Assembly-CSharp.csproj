@@ -588,6 +588,7 @@
      <None Include="Assets\HoloToolkit\Input\Shaders\EditorHands.shader" />
      <None Include="Assets\HoloToolkit\SpatialMapping\Shaders\Occlusion.shader" />
      <None Include="Assets\HoloToolkit\MRTKVersion.txt" />
+     <None Include="Assets\Resources\Shaders\UITransparent.shader" />
      <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandard.shader" />
      <None Include="Assets\HoloToolkit\SpatialUnderstanding\Materials\SpatialMappingSurface.shader" />
      <None Include="Assets\HoloToolkit\UX\Shaders\Normal-Diffuse.shader" />
