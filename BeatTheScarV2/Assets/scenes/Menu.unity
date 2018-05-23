@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: ae52d8d2c24bcd041af5b1f1728f9d11, type: 3}
-  SceneName: Menu
+  SceneName: Options
 --- !u!82 &358724789
 AudioSource:
   m_ObjectHideFlags: 0
@@ -681,6 +681,11 @@ Prefab:
       propertyPath: m_Text
       value: Instructions
       objectReference: {fileID: 0}
+    - target: {fileID: 114656842599945344, guid: f3545e470cda7bb49ae02d63a4b37cbb,
+        type: 2}
+      propertyPath: m_Text
+      value: Start
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114686703239665938, guid: f3545e470cda7bb49ae02d63a4b37cbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f3545e470cda7bb49ae02d63a4b37cbb, type: 2}
@@ -784,8 +789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c73560294fe8a4ba2466a6a7b4d21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 102900000, guid: 508684e12a2b63f499aa81bfc7ac0b26, type: 3}
-  SceneName: Warmup
+  scene: {fileID: 102900000, guid: 9e965f32a55d63d46b5a8856004b45e8, type: 3}
+  SceneName: GameSelect
 --- !u!114 &1390243176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,6 +1270,11 @@ Prefab:
     - target: {fileID: 4541142303025740, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 81867938468442352, guid: d29bc40b7f3df26479d6a0aac211c355,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
