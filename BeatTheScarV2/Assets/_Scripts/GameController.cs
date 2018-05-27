@@ -41,11 +41,12 @@ public class GameController : MonoBehaviour
         //InteractionManager.InteractionSourceLost += SourceManager_SourceLost;
         //InteractionManager.InteractionSourcePressed += SourceManager_SourcePressed;
         //InteractionManager.InteractionSourceReleased += SourceManager_SourceReleased;
-        InteractionManager.InteractionSourceUpdated += SourceManager_SourceUpdated;
-        InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
         //InteractionManager.InteractionSourceLost += InteractionManager_InteractionSourceLost;
 
-        InteractionManager.GetCurrentReading();
+
+        //////InteractionManager.InteractionSourceUpdated += SourceManager_SourceUpdated;
+        //////InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
+        //////InteractionManager.GetCurrentReading();
 
         HandText.text = "Nothing Detected";
 
@@ -78,39 +79,39 @@ public class GameController : MonoBehaviour
 
     }
 
-    private void SourceManager_SourceDetected(InteractionSourceDetectedEventArgs obj)
-    {
-        if (obj.state.source.kind != InteractionSourceKind.Hand)
-        {
-            return;
-        }
-        //trackedHands.Add(state.source.id);
+    //private void SourceManager_SourceDetected(InteractionSourceDetectedEventArgs obj)
+    //{
+    //    if (obj.state.source.kind != InteractionSourceKind.Hand)
+    //    {
+    //        return;
+    //    }
+    //    //trackedHands.Add(state.source.id);
 
-        //var obj = Instantiate(TrackingObject) as GameObject;
-        //Vector3 pos;
-        //if (state.properties.location.TryGetPosition(out pos))
-        //{
-        //    obj.transform.position = pos;
-        //}
-        //trackingObject.Add(state.source.id, obj);
-    }
-
-
-
-    private void SourceManager_SourceUpdated(InteractionSourceUpdatedEventArgs obj)
-    {
-        InteractionSourcePose statePose = obj.state.sourcePose;
+    //    //var obj = Instantiate(TrackingObject) as GameObject;
+    //    //Vector3 pos;
+    //    //if (state.properties.location.TryGetPosition(out pos))
+    //    //{
+    //    //    obj.transform.position = pos;
+    //    //}
+    //    //trackingObject.Add(state.source.id, obj);
+    //}
 
 
-        obj.state.sourcePose.TryGetPosition(out handPosition);
+
+    //private void SourceManager_SourceUpdated(InteractionSourceUpdatedEventArgs obj)
+    //{
+    //    InteractionSourcePose statePose = obj.state.sourcePose;
 
 
-    }
+    //    obj.state.sourcePose.TryGetPosition(out handPosition);
+
+
+    //}
 
     void OnDestroy()
     {
-        InteractionManager.InteractionSourceUpdated -= SourceManager_SourceUpdated;
-        gestureRecognizer.TappedEvent -= GestureRecognizerOnTappedEvent;
+        //InteractionManager.InteractionSourceUpdated -= SourceManager_SourceUpdated;
+        //gestureRecognizer.TappedEvent -= GestureRecognizerOnTappedEvent;
     }
 
     void Update()
@@ -131,6 +132,15 @@ public class GameController : MonoBehaviour
         }
 
     }
+
+    public void PlayerShoot()
+    {
+        if (!gameOver)
+        {
+            player.Shoot();
+        }
+    }
+
 
     public void GameOver()
     {

@@ -21,7 +21,7 @@ public class SpeechManager : MonoBehaviour
         }
         if (gameController == null)
         {
-            Debug.Log("'GameControlWarmup' script not found");
+            Debug.Log("'GameController' script not found");
         }
 
 
