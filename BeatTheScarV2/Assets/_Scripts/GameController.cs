@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     public Text ScoreText;
     public Text RestartText;
     public Text GameOverText;
-    public Text HandText;
+    //public Text HandText;
 
     private int score;
     private bool gameOver;
@@ -30,9 +30,9 @@ public class GameController : MonoBehaviour
 
     private PlayerController player;
 
-    private GestureRecognizer gestureRecognizer;
+    /////////////////private GestureRecognizer gestureRecognizer;
 
-    private Vector3 handPosition;
+    //private Vector3 handPosition;
 
     void Start()
     {
@@ -48,13 +48,13 @@ public class GameController : MonoBehaviour
         //////InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
         //////InteractionManager.GetCurrentReading();
 
-        HandText.text = "Nothing Detected";
+        //HandText.text = "Nothing Detected";
 
         // Set up GestureRecognizer to register the users finger taps
-        gestureRecognizer = new GestureRecognizer();
-        gestureRecognizer.TappedEvent += GestureRecognizerOnTappedEvent;
-        gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
-        gestureRecognizer.StartCapturingGestures();
+        ////////////gestureRecognizer = new GestureRecognizer();
+        ////////////gestureRecognizer.TappedEvent += GestureRecognizerOnTappedEvent;
+        ////////////gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
+        ////////////gestureRecognizer.StartCapturingGestures();
 
         GameObject gcObj = GameObject.FindGameObjectWithTag("Player");
         //GameOverText.text += "Test for NULL ";
@@ -117,21 +117,21 @@ public class GameController : MonoBehaviour
     void Update()
     {
 
-        InteractionManager.GetCurrentReading();
+        //////////////////InteractionManager.GetCurrentReading();
 
-        HandText.text = handPosition.ToString();
-
-    }
-
-
-    private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
-    {
-        if (!gameOver)
-        {
-            player.Shoot();
-        }
+        //HandText.text = handPosition.ToString();
 
     }
+
+
+    //private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+    //{
+    //    if (!gameOver)
+    //    {
+    //        player.Shoot();
+    //    }
+
+    //}
 
     public void PlayerShoot()
     {

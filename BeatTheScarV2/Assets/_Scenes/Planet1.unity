@@ -447,9 +447,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 380841324}
+  - component: {fileID: 380841323}
   - component: {fileID: 380841327}
   - component: {fileID: 380841326}
-  - component: {fileID: 380841323}
   - component: {fileID: 380841325}
   m_Layer: 0
   m_Name: GameController
@@ -482,7 +482,6 @@ MonoBehaviour:
   ScoreText: {fileID: 812634062}
   RestartText: {fileID: 1932313747}
   GameOverText: {fileID: 756253366}
-  HandText: {fileID: 1180821528}
 --- !u!4 &380841324
 Transform:
   m_ObjectHideFlags: 0
@@ -617,6 +616,7 @@ MonoBehaviour:
   DefaultColor: {r: 0, g: 1, b: 0, a: 1}
   TapColor: {r: 0, g: 0, b: 1, a: 1}
   HoldColor: {r: 1, g: 0, b: 0, a: 1}
+  HandText: {fileID: 1180821528}
 --- !u!1 &459354492
 GameObject:
   m_ObjectHideFlags: 0

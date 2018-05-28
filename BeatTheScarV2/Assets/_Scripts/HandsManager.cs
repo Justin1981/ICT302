@@ -27,11 +27,14 @@ public class HandsManager : MonoBehaviour
     public Color DefaultColor = Color.green;
     public Color TapColor = Color.blue;
     public Color HoldColor = Color.red;
+    public Text HandText;
 
     private HashSet<uint> trackedHands = new HashSet<uint>();
     private Dictionary<uint, GameObject> trackingObject = new Dictionary<uint, GameObject>();
     private GestureRecognizer gestureRecognizer;
     private uint activeId;
+
+    private Vector3 handPosition;
 
 
     private GameController gameController;
@@ -59,12 +62,15 @@ public class HandsManager : MonoBehaviour
 
         gestureRecognizer = new GestureRecognizer();
         gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.Hold);
-        gestureRecognizer.Tapped += GestureRecognizer_Tapped;
+        gestureRecognizer.TappedEvent += GestureRecognizer_OnTappedEvent;
+        //////////gestureRecognizer.Tapped += GestureRecognizer_Tapped;
         gestureRecognizer.HoldStarted += GestureRecognizer_HoldStarted;
         gestureRecognizer.HoldCompleted += GestureRecognizer_HoldCompleted;
         gestureRecognizer.HoldCanceled += GestureRecognizer_HoldCanceled;            
         gestureRecognizer.StartCapturingGestures();
         StatusText.text = "READY";
+        HandText.text = "Nothing Detected";
+
     }
 
     void Update()
@@ -72,7 +78,7 @@ public class HandsManager : MonoBehaviour
 
         InteractionManager.GetCurrentReading();
 
-        //HandText.text = handPosition.ToString();
+        HandText.text = handPosition.ToString();
 
     }
 
@@ -94,7 +100,7 @@ public class HandsManager : MonoBehaviour
     //    //trackingObject.Add(state.source.id, obj);
     //}
 
-    private void GestureRecognizerOnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+    private void GestureRecognizer_OnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
     {
 
         gameController.PlayerShoot();
@@ -108,7 +114,7 @@ public class HandsManager : MonoBehaviour
     //    InteractionSourcePose statePose = obj.state.sourcePose;
 
 
-    //    obj.state.sourcePose.TryGetPosition(out handPosition);
+        //obj.state.sourcePose.TryGetPosition(out handPosition);
 
 
     //}
@@ -158,7 +164,10 @@ public class HandsManager : MonoBehaviour
     }
 
     private void GestureRecognizer_Tapped(TappedEventArgs args)
-    {            
+    {
+
+        gameController.PlayerShoot();
+
         uint id = args.source.id;
         StatusText.text = "Tapped - Kind: " + args.source.kind.ToString() + " - Id:{id}";
         if (trackingObject.ContainsKey(activeId))
@@ -263,7 +272,7 @@ public class HandsManager : MonoBehaviour
         gestureRecognizer.HoldCompleted -= GestureRecognizer_HoldCompleted;
         gestureRecognizer.HoldCanceled -= GestureRecognizer_HoldCanceled;
 
-        gestureRecognizer.TappedEvent -= GestureRecognizerOnTappedEvent;
+        gestureRecognizer.TappedEvent -= GestureRecognizer_OnTappedEvent;
         gestureRecognizer.StopCapturingGestures();
     }
 }
