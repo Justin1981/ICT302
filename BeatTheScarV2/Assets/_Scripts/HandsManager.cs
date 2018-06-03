@@ -24,22 +24,18 @@ public class HandsManager : MonoBehaviour
 
     //public GameObject TrackingObject;
     public Text StatusText;
-    public Color DefaultColor = Color.green;
-    public Color TapColor = Color.blue;
-    public Color HoldColor = Color.red;
-    public Text HandText;
+    public Text HandPosText;
 
     private HashSet<uint> trackedHands = new HashSet<uint>();
-    private Dictionary<uint, GameObject> trackingObject = new Dictionary<uint, GameObject>();
+    //private Dictionary<uint, GameObject> trackingObject = new Dictionary<uint, GameObject>();
     private GestureRecognizer gestureRecognizer;
     private uint activeId;
 
     private Vector3 handPosition;
 
-
     private GameController gameController;
 
-    void Awake()
+    void Start()
     {
         GameObject gcObj = GameObject.FindGameObjectWithTag("GameController");
         if (gcObj != null)
@@ -55,128 +51,70 @@ public class HandsManager : MonoBehaviour
         InteractionManager.InteractionSourceUpdated += InteractionManager_InteractionSourceUpdated;
         InteractionManager.InteractionSourceLost += InteractionManager_InteractionSourceLost;
 
-        //InteractionManager.InteractionSourceUpdated += SourceManager_SourceUpdated;
-        //InteractionManager.InteractionSourceDetected += SourceManager_SourceDetected;
         InteractionManager.GetCurrentReading();
-
 
         gestureRecognizer = new GestureRecognizer();
         gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.Hold);
-        gestureRecognizer.TappedEvent += GestureRecognizer_OnTappedEvent;
-        //////////gestureRecognizer.Tapped += GestureRecognizer_Tapped;
-        gestureRecognizer.HoldStarted += GestureRecognizer_HoldStarted;
-        gestureRecognizer.HoldCompleted += GestureRecognizer_HoldCompleted;
-        gestureRecognizer.HoldCanceled += GestureRecognizer_HoldCanceled;            
+        gestureRecognizer.Tapped += GestureRecognizer_Tapped;
+        //gestureRecognizer.HoldStarted += GestureRecognizer_HoldStarted;
+        //gestureRecognizer.HoldCompleted += GestureRecognizer_HoldCompleted;
+        //gestureRecognizer.HoldCanceled += GestureRecognizer_HoldCanceled;            
         gestureRecognizer.StartCapturingGestures();
         StatusText.text = "READY";
-        HandText.text = "Nothing Detected";
+        HandPosText.text = "Nothing Detected";
 
     }
 
     void Update()
     {
-
         InteractionManager.GetCurrentReading();
 
-        HandText.text = handPosition.ToString();
-
+        HandPosText.text = handPosition.ToString();
     }
-
-
-    //private void SourceManager_SourceDetected(InteractionSourceDetectedEventArgs obj)
-    //{
-    //    if (obj.state.source.kind != InteractionSourceKind.Hand)
-    //    {
-    //        return;
-    //    }
-    //    //trackedHands.Add(state.source.id);
-
-    //    //var obj = Instantiate(TrackingObject) as GameObject;
-    //    //Vector3 pos;
-    //    //if (state.properties.location.TryGetPosition(out pos))
-    //    //{
-    //    //    obj.transform.position = pos;
-    //    //}
-    //    //trackingObject.Add(state.source.id, obj);
-    //}
-
-    private void GestureRecognizer_OnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
-    {
-
-        gameController.PlayerShoot();
-
-
-    }
-
-
-    //private void SourceManager_SourceUpdated(InteractionSourceUpdatedEventArgs obj)
-    //{
-    //    InteractionSourcePose statePose = obj.state.sourcePose;
-
-
-        //obj.state.sourcePose.TryGetPosition(out handPosition);
-
-
-    //}
-
-    void ChangeObjectColor(GameObject obj, Color color)
-    {            
-        var rend = obj.GetComponentInChildren<Renderer>();
-        if (rend)
-        {
-            rend.material.color = color;
-            Debug.LogFormat("Color Change: {0}", color.ToString());
-        }
-    }
-
 
     private void GestureRecognizer_HoldStarted(HoldStartedEventArgs args)
     {
         uint id = args.source.id;            
-        StatusText.text = "HoldStarted - Kind: " + args.source.kind.ToString() + " - Id:{id}";
-        if (trackingObject.ContainsKey(activeId))
-        {
-            ChangeObjectColor(trackingObject[activeId], HoldColor);
+        StatusText.text = "HoldStarted - Kind: " + args.source.kind.ToString() + " - Id: " +  id.ToString();
+
+        if(activeId == id)
             StatusText.text += "-TRACKED";
-        }
     }
 
     private void GestureRecognizer_HoldCompleted(HoldCompletedEventArgs args)
     {
         uint id = args.source.id;            
-        StatusText.text = "HoldCompleted - Kind:" + args.source.kind.ToString() + " - Id:{id}";
-        if(trackingObject.ContainsKey(activeId))
-        {
-            ChangeObjectColor(trackingObject[activeId], DefaultColor);
+        StatusText.text = "HoldCompleted - Kind:" + args.source.kind.ToString() + " - Id: " + id.ToString();
+
+        if (activeId == id)
             StatusText.text += "-TRACKED";
-        }
     }
 
     private void GestureRecognizer_HoldCanceled(HoldCanceledEventArgs args)
     {
         uint id = args.source.id;            
-        StatusText.text = "HoldCanceled - Kind: " + args.source.kind.ToString() + " - Id:{id}";
-        if (trackingObject.ContainsKey(activeId))
-        {
-            ChangeObjectColor(trackingObject[activeId], DefaultColor);
+        StatusText.text = "HoldCanceled - Kind: " + args.source.kind.ToString() + " - Id: " + id.ToString();
+
+        if (activeId == id)
             StatusText.text += "-TRACKED";
-        }
     }
 
     private void GestureRecognizer_Tapped(TappedEventArgs args)
     {
+        uint id = args.source.id;
+        StatusText.text = "Tapped - Kind: " + args.source.kind.ToString() + " - Id: " + id.ToString();  
+
+        if (activeId == id)
+            StatusText.text += "-TRACKED";
+
+        //if (activeId != id)
+        //{
+            //gameController.PlayerUpdateHand((int)activeId, handPosition);
+        //}
 
         gameController.PlayerShoot();
-
-        uint id = args.source.id;
-        StatusText.text = "Tapped - Kind: " + args.source.kind.ToString() + " - Id:{id}";
-        if (trackingObject.ContainsKey(activeId))
-        {
-            ChangeObjectColor(trackingObject[activeId], TapColor);
-            StatusText.text += "-TRACKED";
-        }            
     }
-        
+
 
     private void InteractionManager_InteractionSourceDetected(InteractionSourceDetectedEventArgs args)
     {
@@ -185,53 +123,20 @@ public class HandsManager : MonoBehaviour
         if (args.state.source.kind != InteractionSourceKind.Hand)
         {
             return;
-        }            
+        }
+        args.state.sourcePose.TryGetPosition(out handPosition);
         trackedHands.Add(id);
         activeId = id;
-
-        //var obj = Instantiate(TrackingObject) as GameObject;
-        //Vector3 pos;
-
-        //if (args.state.sourcePose.TryGetPosition(out pos))
-        //{
-        //    obj.transform.position = pos;
-        //}
-
-        //trackingObject.Add(id, obj);
-
-
+        //gameController.PlayerUpdateHand((int)activeId, handPosition);
     }
 
     private void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventArgs args)
     {
-        uint id = args.state.source.id;
-        Vector3 pos;
-        Quaternion rot;
-
         if (args.state.source.kind == InteractionSourceKind.Hand)
         {
-            //if (trackingObject.ContainsKey(id))
-            //{
-            //    if (args.state.sourcePose.TryGetPosition(out pos))
-            //    {
-            //        trackingObject[id].transform.position = pos;
-            //    }
-
-            //    if (args.state.sourcePose.TryGetRotation(out rot))
-            //    {
-            //        trackingObject[id].transform.rotation = rot;
-            //    }
-            //}
-
-            InteractionSourcePose statePose = args.state.sourcePose;
-
-
             args.state.sourcePose.TryGetPosition(out handPosition);
-
         }
-
-
-
+        gameController.PlayerUpdateHand((int)activeId, handPosition);
     }
 
     private void InteractionManager_InteractionSourceLost(InteractionSourceLostEventArgs args)
@@ -248,16 +153,14 @@ public class HandsManager : MonoBehaviour
             trackedHands.Remove(id);
         }
 
-        if (trackingObject.ContainsKey(id))
-        {
-            var obj = trackingObject[id];
-            trackingObject.Remove(id);
-            Destroy(obj);
-        }
         if (trackedHands.Count > 0)
         {
             activeId = trackedHands.First();
         }
+        //else
+        //{
+        //    handPosition.Set(0.0f, 0.0f, 0.0f);
+        //}
     }
 
     void OnDestroy()
@@ -265,14 +168,15 @@ public class HandsManager : MonoBehaviour
         InteractionManager.InteractionSourceDetected -= InteractionManager_InteractionSourceDetected;
         InteractionManager.InteractionSourceUpdated -= InteractionManager_InteractionSourceUpdated;
         InteractionManager.InteractionSourceLost -= InteractionManager_InteractionSourceLost;
-        //InteractionManager.InteractionSourceUpdated -= SourceManager_SourceUpdated;
+
+        // Not required for current Unity project
+        //gestureRecognizer.HoldStarted -= GestureRecognizer_HoldStarted;
+        //gestureRecognizer.HoldCompleted -= GestureRecognizer_HoldCompleted;
+        //gestureRecognizer.HoldCanceled -= GestureRecognizer_HoldCanceled;
 
         gestureRecognizer.Tapped -= GestureRecognizer_Tapped;
-        gestureRecognizer.HoldStarted -= GestureRecognizer_HoldStarted;
-        gestureRecognizer.HoldCompleted -= GestureRecognizer_HoldCompleted;
-        gestureRecognizer.HoldCanceled -= GestureRecognizer_HoldCanceled;
 
-        gestureRecognizer.TappedEvent -= GestureRecognizer_OnTappedEvent;
         gestureRecognizer.StopCapturingGestures();
     }
+
 }

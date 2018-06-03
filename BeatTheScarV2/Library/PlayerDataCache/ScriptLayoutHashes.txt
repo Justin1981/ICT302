@@ -335,9 +335,9 @@ caf36d571bbde50738bdafae2e623420 Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.Sym
 da88126cdf11ba2e81311bc5c64d91f3 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputControl
 0e685b170300bf256eae2ab5064c7c81 Assembly-CSharp.dll:.movement
 774d2cbfee83c1c0f3c11e30c7a8c851 Assembly-CSharp.dll:HoloToolkit.Unity.ToggleDebugWindow
-412ecf2a71d28ac5ff777f777aeaa27f Assembly-CSharp.dll:.HandsManager
+f128c6601b43061a769f5c5a2932690c Assembly-CSharp.dll:.HandsManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadStats
-850e4d340427c402b5fa86773c588410 Assembly-CSharp.dll:.GameController
+27c01fbd8d1d008c9266353a6e6d74cb Assembly-CSharp.dll:.GameController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Sharing.TransformSynchronizer
 14b6addcca4e931e521ac082ad7316db Assembly-CSharp.dll:HoloToolkit.Unity.AudioOccluder
 f1dddc522eb4451a473352e2116e6cff Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.GamePadHandlerBase
